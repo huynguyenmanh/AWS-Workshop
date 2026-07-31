@@ -1,33 +1,31 @@
 ---
 title: "Workshop"
-date: 2024-01-01
+date: 2026-07-31
 weight: 5
 chapter: false
 pre: " <b> 5. </b> "
 ---
 
-{{% notice warning %}}
-⚠️ **Lưu ý:** Các thông tin dưới đây chỉ nhằm mục đích tham khảo, vui lòng **không sao chép nguyên văn** cho bài báo cáo của bạn kể cả warning này.
-{{% /notice %}}
 
-
-# Đảm bảo truy cập Hybrid an toàn đến S3 bằng cách sử dụng VPC endpoint
+# Xây dựng và triển khai ứng dụng Todo serverless trên AWS
 
 #### Tổng quan
 
-**AWS PrivateLink** cung cấp kết nối riêng tư đến các dịch vụ aws từ VPCs hoặc trung tâm dữ liệu (on-premise) mà không làm lộ lưu lượng truy cập ra ngoài public internet.
+Workshop này hướng dẫn bạn xây dựng và triển khai một ứng dụng web quản lý công việc và ghi chú theo kiến trúc serverless trên AWS. Người dùng có thể đăng ký tài khoản, quản lý hồ sơ, tổ chức công việc bằng trạng thái và danh mục tùy chỉnh, tự động lưu bản nháp, sử dụng bộ lọc, xem thống kê, import hoặc export công việc và tải lên các tệp đính kèm riêng tư.
 
-Trong bài lab này, chúng ta sẽ học cách tạo, cấu hình, và kiểm tra VPC endpoints để cho phép workload của bạn tiếp cận các dịch vụ AWS mà không cần đi qua Internet công cộng.
+Kiến trúc của dự án được chia thành các nhóm dịch vụ sau:
++ **Frontend & Authentication** - Lưu frontend tĩnh trong Amazon S3, phân phối nội dung thông qua Amazon CloudFront và sử dụng Amazon Cognito để đăng ký và xác thực người dùng.
++ **API & Compute** - Cung cấp các HTTP endpoint được bảo vệ thông qua Amazon API Gateway và xử lý nghiệp vụ bằng AWS Lambda.
++ **Data & Storage** - Lưu dữ liệu thuộc quyền sở hữu của từng người dùng trong Amazon DynamoDB, đồng thời lưu ảnh đại diện và tệp đính kèm của công việc trong một Amazon S3 bucket riêng tư.
++ **Monitoring & Permissions** - Thu thập log của API và Lambda bằng Amazon CloudWatch, đồng thời kiểm soát quyền truy cập giữa các dịch vụ bằng AWS IAM.
 
-Chúng ta sẽ tạo hai loại endpoints để truy cập đến Amazon S3: gateway vpc endpoint và interface vpc endpoint. Hai loại vpc endpoints này mang đến nhiều lợi ích tùy thuộc vào việc bạn truy cập đến S3 từ môi trường cloud hay từ trung tâm dữ liệu (on-premise).
-+ **Gateway** - Tạo gateway endpoint để gửi lưu lượng đến Amazon S3 hoặc DynamoDB using private IP addresses. Bạn điều hướng lưu lượng từ VPC của bạn đến gateway endpoint bằng các bảng định tuyến (route tables)
-+ **Interface** - Tạo interface endpoint để gửi lưu lượng đến các dịch vụ điểm cuối (endpoints) sử dụng Network Load Balancer để phân phối lưu lượng. Lưu lượng dành cho dịch vụ điểm cuối được resolved bằng DNS.
+Trong quá trình triển khai, bạn sẽ tự chọn tên tài nguyên và AWS Region phù hợp với môi trường của mình. Frontend nhận JWT từ Cognito và gửi access token đến API Gateway. API Gateway kiểm tra token trước khi gọi Lambda, còn Lambda giao tiếp với DynamoDB, S3 bucket chứa tệp đính kèm và các Cognito administrative API khi cần thiết.
 
 #### Nội dung
 
-1. [Tổng quan về workshop](5.1-Workshop-overview/)
+1. [Tổng quan Workshop](5.1-Overview)
 2. [Chuẩn bị](5.2-Prerequiste/)
-3. [Truy cập đến S3 từ VPC](5.3-S3-vpc/)
-4. [Truy cập đến S3 từ TTDL On-premises](5.4-S3-onprem/)
-5. [VPC Endpoint Policies (làm thêm)](5.5-Policy/)
+3. [Deploy frontend lên S3](5.3-S3/)
+4. [Deploy backend và storage](5.4-Lambda-Data/)
+5. [Kiểm thử](5.5-Testing/)
 6. [Dọn dẹp tài nguyên](5.6-Cleanup/)

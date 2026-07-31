@@ -6,9 +6,7 @@ chapter: false
 pre: " <b> 3.2. </b> "
 ---
 
-{{% notice warning %}}
-⚠️ **Note:** The information below is for reference purposes only. Please **do not copy verbatim** for your report, including this warning.
-{{% /notice %}}
+
 
 # MANAGING AWS LAMBDA FUNCTION CODE WITH SELF-MANAGED AMAZON S3 BUCKETS
 
@@ -93,3 +91,5 @@ A Serverless E-commerce platform utilizes hundreds of Lambda Functions (Authenti
 **Self-Managed Amazon S3 Buckets (REFERENCE Mode)** gives teams granular control over AWS Lambda deployment artifacts. By using S3 objects directly as code sources, organizations reduce quota pressure, streamline CI/CD releases, enable instant rollbacks, and enforce strict enterprise security controls.
 
 🔗 **Original Reference Article:** [AWS Compute Blog: Introducing Self-Managed Amazon S3 Buckets for AWS Lambda Function Code](https://aws.amazon.com/blogs/compute/introducing-self-managed-amazon-s3-buckets-for-aws-lambda-function-code/)
+
+![Blog](<../../images/3-Blogs/Blog2.png>)

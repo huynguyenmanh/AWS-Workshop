@@ -6,9 +6,7 @@ chapter: false
 pre: " <b> 7. </b> "
 ---
 
-{{% notice warning %}}
-⚠️ **Lưu ý:** Các thông tin dưới đây chỉ nhằm mục đích tham khảo, vui lòng **không sao chép nguyên văn** cho bài báo cáo của bạn kể cả warning này.
-{{% /notice %}}
+
 
 > Tại đây, tôi xin chia sẻ một số góc nhìn và cảm nhận cá nhân về trải nghiệm thực tế trong suốt 12 tuần tham gia chương trình First Cloud AI Journey (FCAJ):
 

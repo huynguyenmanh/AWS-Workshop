@@ -6,9 +6,6 @@ chapter: false
 pre: " <b> 3.1. </b> "
 ---
 
-{{% notice warning %}}
-⚠️ **Note:** The information below is for reference purposes only. Please **do not copy verbatim** for your report, including this warning.
-{{% /notice %}}
 
 # LOCAL DATA STORAGE WITH AMAZON S3 IN AWS LOCAL ZONES
 
@@ -79,3 +76,5 @@ By deploying **Amazon S3 in Hanoi Local Zone**, the hospital established the fol
 Amazon S3 in AWS Local Zones (specifically the **Hanoi Local Zone**) provides a crucial link connecting **Data Residency Compliance** with **Cloud Scalability**. It empowers enterprises in Vietnam's Finance, Healthcare, and Public sectors to modernize their data stack without sacrificing local storage control.
 
 🔗 **Original Reference Document:** [AWS Blog: Unlocking Data Residency with Amazon S3 in AWS Local Zones](https://aws.amazon.com/blogs/aws/unlocking-data-residency-with-amazon-s3-in-aws-local-zones/)
+
+![Blog](<../../images/3-Blogs/Blog1.png>)

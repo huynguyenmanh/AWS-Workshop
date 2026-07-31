@@ -6,9 +6,7 @@ chapter: false
 pre: " <b> 3. </b> "
 ---
 
-{{% notice warning %}}
-⚠️ **Lưu ý:** Các thông tin dưới đây chỉ nhằm mục đích tham khảo, vui lòng **không sao chép nguyên văn** cho bài báo cáo của bạn kể cả cảnh báo này.
-{{% /notice %}}
+
 
 Mục này tổng hợp và giới thiệu các bài viết chia sẻ kiến thức kỹ thuật (Tech Blogs) đã được biên soạn và đăng tải lên cộng đồng [AWS Study Group](https://www.facebook.com/groups/awsstudygroupfcj).
 
@@ -26,3 +24,5 @@ Bài viết phân tích chuyên sâu tính năng Self-Managed Amazon S3 Buckets 
 
 ### 📌 [Blog 3 - XỬ LÝ HÀNG TRIỆU BẢN GHI DYNAMODB DỄ DÀNG HƠN VỚI BULK EXECUTOR](3.3-blog-3/)
 Bài viết giới thiệu công cụ mã nguồn mở Bulk Executor for Amazon DynamoDB do AWS Labs phát triển. Công cụ này kết hợp giao diện dòng lệnh (CLI) đơn giản với khả năng xử lý tính toán phân tán song song của AWS Glue (Apache Spark) ở phía sau, giúp quản trị viên thực hiện các thao tác hàng loạt như đếm, tìm kiếm, cập nhật, xóa, sao chép hay phân tích trên hàng triệu bản ghi DynamoDB một cách an toàn và hiệu quả.
+
+

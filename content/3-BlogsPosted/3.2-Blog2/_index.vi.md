@@ -6,9 +6,6 @@ chapter: false
 pre: " <b> 3.2. </b> "
 ---
 
-{{% notice warning %}}
-⚠️ **Lưu ý:** Các thông tin dưới đây chỉ nhằm mục đích tham khảo, vui lòng **không sao chép nguyên văn** cho bài báo cáo của bạn kể cả cảnh báo này.
-{{% /notice %}}
 
 # CHỦ ĐỘNG QUẢN LÝ MÃ NGUỒN AWS LAMBDA VỚI AMAZON S3 SELF-MANAGED BUCKETS
 
@@ -92,3 +89,5 @@ Một hệ thống Thương mại Điện tử Serverless quản lý hàng trăm
 Tính năng **Self-Managed Amazon S3 Buckets (REFERENCE Mode)** giúp doanh nghiệp hoàn toàn chủ động trong việc quản lý mã nguồn AWS Lambda. Đây là giải pháp tối ưu cho các hệ thống Serverless quy mô lớn, giúp giảm tải hạn mức lưu trữ, nâng cao tính bảo mật và tối ưu hóa quy trình CI/CD deployment.
 
 🔗 **Link tài liệu tham khảo gốc:** [AWS Compute Blog: Introducing Self-Managed Amazon S3 Buckets for AWS Lambda Function Code](https://aws.amazon.com/blogs/compute/introducing-self-managed-amazon-s3-buckets-for-aws-lambda-function-code/)
+
+![Blog](<../../images/3-Blogs/Blog2.png>)

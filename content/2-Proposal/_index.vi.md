@@ -44,7 +44,7 @@ Xây dựng ứng dụng Web dựa trên kiến trúc Serverless toàn diện tr
 
 Ứng dụng chia làm 7 tầng dịch vụ chính theo đúng sơ đồ kiến trúc hệ thống:
 
-![Serverless Todo/Note Architecture](../images/2-Proposal/architecture_diagram.png)
+![Serverless Todo/Note Architecture](../../images/2-Proposal/architecture_diagram.png)
 
 #### Các dịch vụ AWS sử dụng
 1. **Client Layer:** Trình duyệt người dùng (User Browser).

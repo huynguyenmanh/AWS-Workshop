@@ -6,9 +6,7 @@ chapter: false
 pre: " <b> 3.3. </b> "
 ---
 
-{{% notice warning %}}
-⚠️ **Lưu ý:** Các thông tin dưới đây chỉ nhằm mục đích tham khảo, vui lòng **không sao chép nguyên văn** cho bài báo cáo của bạn kể cả cảnh báo này.
-{{% /notice %}}
+
 
 # XỬ LÝ HÀNG TRIỆU BẢN GHI DYNAMODB DỄ DÀNG HƠN VỚI BULK EXECUTOR
 
@@ -88,3 +86,5 @@ Một hệ thống Thương mại Điện tử muốn xử lý dữ liệu hàng
 🔗 **Tài liệu tham khảo gốc:**
 * [AWS Database Blog: Introducing open source Bulk Executor for Amazon DynamoDB](https://aws.amazon.com/blogs/database/introducing-open-source-bulk-executor-for-amazon-dynamodb/)
 * [GitHub Repository: awslabs/amazon-dynamodb-tools](https://github.com/awslabs/amazon-dynamodb-tools/tree/main/tools/bulk_executor)
+
+![Blog](<../../images/3-Blogs/Blog3.png>)

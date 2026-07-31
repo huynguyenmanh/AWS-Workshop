@@ -6,9 +6,6 @@ chapter: false
 pre: " <b> 7. </b> "
 ---
 
-{{% notice warning %}}
-⚠️ **Note:** The information below is for reference purposes only. Please **do not copy verbatim** for your report, including this warning.
-{{% /notice %}}
 
 > Here, I would like to freely share my personal thoughts and feedback regarding my 12-week internship experience in the First Cloud AI Journey (FCAJ) program:
 

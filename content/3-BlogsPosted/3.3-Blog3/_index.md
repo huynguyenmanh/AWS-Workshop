@@ -6,9 +6,7 @@ chapter: false
 pre: " <b> 3.3. </b> "
 ---
 
-{{% notice warning %}}
-⚠️ **Note:** The information below is for reference purposes only. Please **do not copy verbatim** for your report, including this warning.
-{{% /notice %}}
+
 
 # PROCESS MILLIONS OF DYNAMODB RECORDS EASILY WITH BULK EXECUTOR
 
@@ -88,3 +86,5 @@ An e-commerce platform needs to manage millions of historical order records:
 🔗 **Original Reference Documents:**
 * [AWS Database Blog: Introducing open source Bulk Executor for Amazon DynamoDB](https://aws.amazon.com/blogs/database/introducing-open-source-bulk-executor-for-amazon-dynamodb/)
 * [GitHub Repository: awslabs/amazon-dynamodb-tools](https://github.com/awslabs/amazon-dynamodb-tools/tree/main/tools/bulk_executor)
+
+![Blog](<../../images/3-Blogs/Blog3.png>)

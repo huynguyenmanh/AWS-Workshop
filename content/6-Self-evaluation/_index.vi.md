@@ -6,9 +6,6 @@ chapter: false
 pre: " <b> 6. </b> "
 ---
 
-{{% notice warning %}}
-⚠️ **Lưu ý:** Các thông tin dưới đây chỉ nhằm mục đích tham khảo, vui lòng **không sao chép nguyên văn** cho bài báo cáo của bạn kể cả warning này.
-{{% /notice %}}
 
 Trong suốt thời gian thực tập tại chương trình **First Cloud AI Journey (FCAJ)** từ ngày **01/06/2026** đến ngày **21/08/2026**, tôi đã có cơ hội học hỏi, rèn luyện và áp dụng kiến thức đã được trang bị tại trường vào môi trường làm việc thực tế.  
 Tôi đã trực tiếp tham gia nghiên cứu, thiết kế kiến trúc và triển khai dự án **Serverless Todo/Note Web Application on AWS**, qua đó cải thiện rõ rệt các kỹ năng chuyên môn như: lập trình hệ thống Serverless (AWS Lambda, API Gateway, DynamoDB), quản trị bảo mật phân quyền (AWS IAM, Amazon Cognito, S3 Security), tư duy thiết kế kiến trúc Cloud và kỹ năng viết tài liệu kỹ thuật song ngữ.  
