@@ -55,7 +55,4 @@ Việc tham gia **FCAJ - Agentic AI Build Week** giống như một cú hích c�
 * **Sức mạnh của áp lực (Hackathon Spirit):** Nhìn cách đội 3KA dựng lên một hệ thống AI nhận diện phức tạp trong vòng 24h, tôi nhận ra giới hạn của bản thân hoàn toàn có thể bị phá vỡ khi ta làm việc với sự tập trung cao độ và một team ăn ý.
 
 #### Một số khoảnh khắc đáng nhớ tại sự kiện
-*(Chèn hình ảnh các đội thi thuyết trình và không khí hackathon tại đây)*
-
-> **Lời kết:**
-> Sự kiện đã khắc họa vô cùng chân thực quyền năng của Agentic AI trong tay những kỹ sư trẻ đầy nhiệt huyết. Đây không chỉ là nơi phô diễn kỹ năng, mà còn là một trạm sạc năng lượng khổng lồ, thôi thúc tôi không ngừng thử nghiệm, xây dựng và dấn thân sâu hơn vào kỷ nguyên của AI Native Apps!
+![Event 3](<../../../images/4-Event/Event3.png>)

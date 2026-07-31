@@ -1,127 +1,136 @@
 ---
 title: "Event 2"
-date: 2026-06-13
-weight: 1
+date: 2026-08-01
+weight: 2
 chapter: false
 pre: " <b> 4.2. </b> "
 ---
 
-
-
-# Summary Report: “Scalable AWS Architecture & DevOps Fundamentals workshop”
+# Summary Report: “SLA, System Monitoring, AWS Security Agent, and AWS Cloud Practitioner”
 
 ### Event Objectives
 
-- Share how to design and deploy scalable system architectures, specifically highlighting a URL shortener service on the AWS platform.
-- Provide a practical perspective and share real-world experiences regarding the roles and daily tasks of DevOps and Data Analytics Engineers in enterprises.
-- Guide the learning roadmap, equip students with foundational skills, and provide career development orientations in the IT industry starting from university.
-- Introduce standard recruitment processes and working cultures in multinational corporations (MNCs).
+- Explain the role of an SLA and how to monitor signals that genuinely affect users.
 
-### Speakers
+- Introduce a continuous process for identifying risks, monitoring signals, responding to incidents, and improving the system afterward.
 
-- **Dat Pham** - Data Analytics Engineer
-- **Cuong Nguyen** - Process Engineer
-- **Trong H. Truong** - DevOps Engineer at Endava Vietnam
-- **Danh Hoang Hieu Nghi** - AI Engineer, AWS Community Builder, AWS Student Builder Group Leader
-- **Dinh Trung Kien** - Lead Developer at startup
-- **Nguyen Minh Tho** - Student
+- Present how AWS Security Agent can support design reviews, source-code analysis, and application security testing.
+
+- Examine the benefits and limitations of automating security testing with an AI Agent.
+
+- Provide an overview of the AWS Certified Cloud Practitioner certification and its four exam domains.
 
 ### Key Highlights
 
-#### The Journey of Starting and Growing with Cloud Computing
+#### From SLA to Monitoring What Really Matters
 
-Starting from Student Curiosity <br>
-→ Learning from tech communities <br>
-→ Practicing through hands-on labs <br>
-→ Building personal projects & portfolios → Becoming an AWS Partner <br>
-→ Sharing knowledge back to the community (Share Back).<br>
-Getting the job is not the destination but merely the beginning of a long journey of learning and contribution.
+- **An SLA is a formal commitment**: A Service Level Agreement defines the service level that a provider commits to delivering to a customer. It establishes expectations, accountability, performance measurement, and risk-management responsibilities.
+- **Monitoring is part of risk management**: Monitoring is not limited to observing system health. It should detect risks before they affect the SLA and the customer experience.
+- **Identify risks**: Teams first determine which situations can affect availability, performance, or the user's ability to complete an important task.
+- **Monitor signals**: After identifying a risk, the system should collect the relevant metrics, logs, and alarms so abnormal behavior can be detected early.
+- **Respond to incidents**: When an alarm activates, the system can notify responders through Amazon SNS, initiate a standard operating procedure, and begin recovery actions.
+- **Continuously improve**: After an incident, the team reviews its cause, evaluates the response, and refines monitoring to prevent the same problem from recurring.
 
-#### Introduction to URL Shortener System Design on AWS
+#### The Monitoring Pyramid
 
-- The basic architecture has the **advantages** of easy deployment and low cost but faces **limitations** such as security risks, single points of failure, high latency, and difficulties in scaling.
-- To optimize performance and security, services like Amazon CloudFront, AWS WAF, and AWS Amplify can be integrated.
-- Using a Key Generation Service (KGS) on Amazon ECS to pre-generate short keys and push them into the Amazon ElastiCache (Redis) helps optimize overall system speed.
-- At the Backend, a SpringBoot application on Amazon ECS fetches the short key from Redis to map it with the destination URL and stores it in a DynamoDB database.
+The monitoring pyramid demonstrates how low-level technical data should connect to real-world outcomes at higher levels:
 
-#### Real-World Work and Career Roadmap of a DevOps Engineer
+1. **Customer Experience** - At the top of the pyramid, this reflects whether end users can complete their journeys and receive the expected experience.
+2. **Business** - Tracks measurements such as successful-login rate, order volume, transaction-completion rate, and revenue.
+3. **Application** - Observes latency, error rate, and request count to evaluate application behavior.
+4. **Infrastructure** - Monitors CPU, memory, disk, and network utilization.
+5. **Cloud Provider** - At the foundation, this represents the status of services such as Amazon EC2, Amazon RDS, Elastic Load Balancing, and Amazon S3.
 
-First, to truly understand DevOps, it's not just about writing CI/CD pipelines, configuring the cloud, or managing Docker/Kubernetes; it also requires a deep understanding of how applications run in the real world.<br>
-**Required Foundational Knowledge:**
-- Prioritize mastering Linux fundamentals
-- Basic Networking knowledge
-- Programming languages (e.g., Python, Golang)
-- Git
-- CI/CD
-- Containers
+- **Healthy infrastructure does not guarantee happy users**: Health checks can pass while users remain unable to sign in, place an order, or complete another important task.
+- **Infrastructure cannot describe the entire service experience**: Stable CPU and memory measurements do not prove that a business workflow is functioning correctly.
+- **Responsibility is shared**: AWS is responsible for the cloud infrastructure within its scope, while the application team remains responsible for configuration, data, application logic, and user experience.
+- **Understand the user journey**: Effective monitoring begins with understanding what users need to accomplish and what could cause that journey to fail.
 
-**Working Mindset:** Tools may change, but fundamentals stay.
-A good DevOps engineer needs to develop system thinking, stay curious and keep learning, automate boring tasks, and make things clear and easy for everyone in the team.
+#### Securing Web Applications with AWS Security Agent
 
-#### Career Orientation and Skills of a Data Analytics Engineer
+- **Manual penetration testing can take weeks**: Traditional assessments commonly require significant time for preparation, execution, verification, and reporting.
+- **Specialist services can be expensive**: According to the session, third-party penetration-testing engagements can range from USD 5,000 to USD 20,000, depending on scope and complexity.
+- **Quality depends on expertise**: Test results are heavily influenced by a penetration tester's experience, methodology, and analytical ability.
 
-- **Real-world responsibilities:** Varies by industry domain, focusing on building reports, designing dashboards to track trends, conducting root cause analysis, and collaborating across departments to solve operational problems.
-- **Required skills:** Critical thinking to evaluate information objectively, effective communication skills, data storytelling capabilities, and the ability to find optimal solutions based on data.
-- **Career progression:** Follower → Learner → Problem Solver → System Thinker → Super Star.
+#### Frontier Agents and Full-Lifecycle Security
 
-#### Corporate Culture in Multinational Corporations (MNCs)
+- **Powered by Amazon Bedrock**: Security Agent can plan and execute complex security workflows with a high level of automation.
+- **Design Review**: The Agent analyzes architecture documents and evaluates designs against frameworks such as PCI DSS, the NIST Cybersecurity Framework, and the AWS Well-Architected Framework.
+- **Code Security**: The Agent scans pull requests for vulnerabilities and sensitive information accidentally committed to source code, such as passwords or API keys.
+- **Active Penetration Testing**: In an environment explicitly authorized by its owner, the Agent can simulate user behavior, validate vulnerabilities through multi-step test sequences, and produce evidence and attack-path diagrams for review.
+- **Development workflow integration**: Security Agent can integrate with GitHub or GitLab pull requests, add comments to relevant lines, and propose Auto-PR Fixes.
+- **Full-lifecycle protection**: Design Review, Code Security, and Active Penetration Testing introduce security throughout development instead of waiting until the end of a project.
 
-- **Standardized recruitment process:** Candidates go through multiple screening rounds, from ATS systems to interviews assessing technical skills and culture fit.
-- **Working environment**: Cultivates a respectful and caring workplace that values diversity and encourages comprehensive development.
-- **"No-Blame Post-Mortem" culture**: When operational incidents occur, the company focuses on root cause analysis to improve systems and processes rather than assigning blame to individuals.
+#### Important Limitations
+
+- **Strong authentication can interrupt automation**: MFA, biometrics, and mTLS introduce verification steps that an Agent may not be able to complete automatically.
+- **Limited business context**: The Agent can struggle to identify business-logic abuse when it lacks a deep understanding of company rules, roles, and workflows.
+- **Complexity increases execution time**: Larger applications with many user journeys require more testing time, making scope control and runtime monitoring essential.
+- **Human review remains necessary**: Development and security teams must evaluate automated findings before treating them as final conclusions or applying proposed fixes.
+- **Testing requires authorization**: Penetration testing must be limited to systems that the tester owns or has explicit permission to assess, with a defined scope and rules of engagement.
+
+#### Inside the AWS Cloud Practitioner Exam
+
+- **A foundational certification**: AWS Certified Cloud Practitioner focuses on cloud thinking and a broad understanding of AWS services.
+- **No advanced programming requirement**: Candidates are not expected to write code or configure a detailed production system during the exam.
+- **Domain 1 - Cloud Concepts (24%)**: Covers cloud benefits, deployment models, elasticity, scalability, and cloud economics.
+- **Domain 2 - Security and Compliance (30%)**: Focuses on the shared responsibility model, IAM, data protection, compliance, and foundational security services.
+- **Domain 3 - Cloud Technology and Services (34%)**: Covers compute, storage, databases, networking, analytics, and common service-selection scenarios.
+- **Domain 4 - Billing, Pricing, and Support (12%)**: Covers pricing models, cost-management tools, AWS Support, and available support resources.
 
 ### Key Takeaways
 
-#### Architectural Thinking & System Design
+#### Monitoring Must Connect to Users
 
-- **Scalability mindset**: Always aim for a scalable and flexible system. Understand how to transition from a simple monolithic architecture to a highly scalable distributed architecture, utilizing caching and NoSQL databases.
-- **Separation of Concerns**: Designing a separate Key Generation Service (KGS) helps reduce the direct load on the primary database when generating short URLs.
-- **Latency & Security optimization**: Combine Amazon CloudFront, AWS WAF, and API Gateway to protect the system and deliver an optimal end-user experience.
+- Dashboards should not be built only from CPU, memory, or individual service-status measurements.
+- Every technical signal should connect to a risk, business impact, or specific user journey.
+- An alarm is useful only when it has an owner, a notification path, and a clear response procedure.
+- Monitoring should be updated after every incident to include previously missed signals.
 
-#### DevOps Mindset & System Operations
+#### Security Automation Requires Control
 
-- Master **fundamental knowledge** such as Linux, Networking, and Containers instead of relying heavily on tools that constantly change over time.
-- Embrace **System Thinking**, viewing an application throughout its entire lifecycle (Build, Test, Deploy, Monitor, Fix) rather than just completing isolated tasks.
-- Learn how to analyze incidents and always look for ways to improve the system to prevent recurring errors and proactively mitigate potential future vulnerabilities.
+- AI Agents can reduce the time required for design assessment, code review, and validation of certain vulnerabilities.
+- Agents cannot completely replace security professionals, especially for complex authentication and business-logic flaws.
+- Security should be included throughout the development lifecycle instead of relying only on penetration testing before release.
+- Active testing must operate within clearly defined authorization, scope, and safety boundaries.
 
-#### Career Roadmap & Professional Conduct
+#### Cloud Practitioner Builds an AWS Foundation
 
-- A career development roadmap should be built through practical products, certifications, community contributions, and continuous learning.
-- Besides technical expertise, soft skills—especially communication and active listening—play a crucial role in an international environment.
+- The certification helps learners understand the common language of cloud before specializing in architecture or operations.
+- Security and Compliance together with Cloud Technology and Services represent most of the exam, so they should receive significant attention in a study plan.
+- Study should focus on why a service is selected and when it is appropriate rather than memorizing disconnected service names.
 
-### Applying to Work
+### Applying the Lessons to Study and Work
 
-- **Caching**: Optimize data queries by utilizing Redis as a cache.
-- **DynamoDB**: NoSQL database → build applications that require high security, fast response times, flexibility, and auto-scaling capabilities.
-- **Automate CI/CD pipelines**: Use Python/Golang to write automation scripts and optimize Dockerfiles, eliminating repetitive manual tasks.
-- **Enhance Data Storytelling**: Design dashboards focusing on key business metrics and perform Root Cause Analysis (RCA).
-- **Build hands-on portfolio**: Participate in practical AWS labs and proactively share back in the community to improve practical skills and expand professional networks.
+- **Define SLI, SLO, and SLA**: Select indicators that represent service quality, establish internal objectives, and make suitable commitments to customers.
+
+- **Design dashboards from the top down**: Start with customer experience and business metrics, then connect them to application, infrastructure, and cloud-provider measurements.
+
+- **Build an incident-response process**: Connect alarms to Amazon SNS or another suitable notification channel, assign ownership, and prepare recovery procedures.
+
+- **Conduct post-incident reviews**: Analyze causes, missed signals, and required improvements after every incident.
+
+- **Integrate security into development**: Review architecture before coding, scan pull requests, and perform active tests only in explicitly authorized environments.
+
+- **Track Agent limitations**: Control scope, runtime, authentication requirements, and business context before automating an assessment.
+
+- **Prepare for Cloud Practitioner by domain**: Study all four domains, practise scenario-based questions, and prioritize shared responsibility, security, core services, and cost management.
 
 ### Event Experience
 
-Attending the event was an incredibly valuable and rewarding experience, helping me expand my mindset on AWS architectural design, truly understand the nature of DevOps and Data Analytics roles, and shape my tech career roadmap.
+#### Connecting SLA to Real User Experience
 
-#### Learning from highly skilled speakers
-- Experienced speakers from the AWS Community, Endava, Colgate-Palmolive, and Kamereo brought highly enriching and authentic real-world stories.
-- Their sharing went beyond theory, diving deep into practical technical problems and management perspectives at large corporations.
+- The session clarified that monitoring is not only about infrastructure; it must measure whether users can complete their intended tasks.
+- The monitoring pyramid provides a clear way to connect cloud status with application behavior, business results, and customer experience.
 
-#### Hands-on technical exposure
-- Listening to the breakdown of each component in the URL Shortener architecture helped me clearly visualize how to combine cloud services to solve latency and scalability challenges.
-- Understanding the real perspective of an experienced DevOps Engineer helped clear up common misconceptions about the profession, revealing the hidden challenges and guiding me to choose the right learning focus.
+#### A New Perspective on Security Automation
 
-#### Impact on Mindset & Career Orientation
-- Adopting the "No-Blame Post-Mortem" mindset changed my perspective on mistakes at work: an incident is an opportunity to fortify the system, not to assign blame.
-- Clearly seeing the growth roadmap from a student to an AWS Community Builder and AWS Partner gave me a strong motivation to persistently accumulate knowledge and aim for new milestones.
+- Security Agent demonstrates how AI Agents can participate from design review through source-code analysis and authorized penetration testing.
+- The limitations emphasize that automation still requires a clear scope, human oversight, and an understanding of business context.
 
-#### Networking and discussions
-- The event fostered an open atmosphere, providing opportunities for direct exchange and networking with industry experts.
-- Reinforced the importance of **community involvement** (such as the AWS Student Builder Group and First Cloud AI Journey) to expand relationships and grow together.
+#### A Clearer AWS Learning Direction
 
-#### Lessons learned
-- Foundational knowledge and problem-solving mindsets are long-term assets, whereas tech tools will constantly change.
-- Career success requires a harmonious combination of deep technical expertise and communication, inclusion, and cultural understanding skills.
-- Always proactively learn, build practical products, and be ready to share knowledge back with the community.
+- The four-domain structure helps beginners identify the knowledge required for AWS Cloud Practitioner.
+- The certification is best understood as a foundation rather than a replacement for practical experience.
 
-#### Some event photos
-*Add your event photos here* 
-> In conclusion, the event provided a fresh perspective, valuable experiences, insights, and immense inspiration from the speakers, giving me a much clearer vision of my future career development path.
+![Event 2](<../../images/4-Event/Event2.png>)

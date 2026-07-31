@@ -1,124 +1,138 @@
 ---
 title: "Event 2"
-date: 2026-06-13
-weight: 1
+date: 2026-08-01
+weight: 2
 chapter: false
 pre: " <b> 4.2. </b> "
 ---
 
-# Bài thu hoạch “Kiến trúc AWS mở rộng và các nguyên tắc cơ bản về DevOps”
+# Báo cáo tổng kết: “SLA, giám sát hệ thống, AWS Security Agent và AWS Cloud Practitioner”
 
-### Mục Đích Của Sự Kiện
+### Mục tiêu sự kiện
 
-- Chia sẻ cách thiết kế và triển khai kiến trúc hệ thống mở rộng, điển hình như dịch vụ rút gọn liên kết trên nền tảng AWS.
-- Cung cấp góc nhìn thực tế, chia sẻ kinh  về vai trò, công việc hằng ngày của các vị trí DevOps và Data Analytics Engineer tại doanh nghiệp.
-- Hướng dẫn lộ trình học tập, trang bị kỹ năng nền tảng và định hướng phát triển sự nghiệp trong ngành IT từ khi còn là sinh viên.
-- Giới thiệu về quy trình tuyển dụng chuẩn và văn hóa làm việc tại các tập đoàn đa quốc gia.
+- Giải thích vai trò của SLA và cách xây dựng hệ thống giám sát dựa trên những tín hiệu thực sự ảnh hưởng đến người dùng.
 
-### Danh Sách Diễn Giả
+- Giới thiệu quy trình nhận diện rủi ro, theo dõi tín hiệu, phản ứng sự cố và cải tiến hệ thống sau sự cố.
 
-- **Đạt Phạm** - Data Analytics Engineer
-- **Cường Nguyễn** - Process Engineer
-- **Trong H. Truong** - DevOps Engineer tại Endava Vietnam
-- **Danh Hoàng Hiếu Nghị** - AI Engineer, AWS Community Builder, AWS Student Builder Group Leader
-- **Đinh Trung Kiên** - Lead developer at starup
-- **Nguyễn Minh Thọ** - Student
+- Trình bày khả năng của AWS Security Agent trong việc hỗ trợ đánh giá thiết kế, kiểm tra mã nguồn và kiểm thử bảo mật ứng dụng.
 
-### Nội Dung Nổi Bật
+- Phân tích những lợi ích và giới hạn của việc tự động hóa kiểm thử bảo mật bằng AI Agent.
 
-#### Hành Trình Bắt Đầu Và Phát Triển Với Điện Toán Đám Mây
+- Cung cấp cái nhìn tổng quan về chứng chỉ AWS Certified Cloud Practitioner và bốn miền kiến thức của kỳ thi.
 
-Khởi đầu từ sự tò mò của sinh viên (Student Curiosity) <br>
-→ Học hỏi từ các cộng đồng công nghệ <br>
-→ Thực hành qua các bài Lab thực tế <br>
-→ Xây dựng dự án & Portfolio cá nhân → Trở thành đối tác (AWS Partner) <br>
-→ Chia sẻ tri thức ngược lại cho cộng đồng (Share Back).<br>
-Nhận được công việc không phải là đích đến mà chỉ là điểm bắt đầu cho một hành trình học tập và cống hiến lâu dài.
+### Nội dung nổi bật
 
-#### Giới Thiệu Về Thiết Kế Hệ Thống Rút Gọn Liên Kết - URL Shortener Trên AWS
+#### Từ SLA đến giám sát những gì thực sự quan trọng
 
-- Cấu trúc cơ bản tuy có **ưu điểm** dễ triển khai và chi phí thấp nhưng lại gặp **hạn chế** về rủi ro bảo mật, single point of failure, có độ trễ và khó mở rộng quy mô.
-- Để tối ưu hóa và bảo mật có thể kết hợp các dịch vụ như Amazon CloudFront, Amazon WAF và Amazon Amplify.
-- Sử dụng dịch vụ Key Generation trên Amazon ECS để tạo sẵn mã ngắn và đẩy vào bộ nhớ đệm của Amazon ElastiCache giúp tối ưu hóa tốc độ hệ thống.
-- Ở Backend, ứng dụng SpringBoot trên Amazon ECS sẽ lấy mã ngắn từ Redis để liên kết với URL đích và lưu trữ vào cơ sở dữ liệu DynamoDB.
+- **SLA là một cam kết chính thức**: Service Level Agreement xác định mức dịch vụ mà nhà cung cấp cam kết với khách hàng. SLA giúp làm rõ kỳ vọng, trách nhiệm giải trình, phương pháp đo lường hiệu năng và cách quản trị rủi ro.
+- **Giám sát là một phần của quản trị rủi ro**: Mục tiêu của monitoring không chỉ là quan sát hệ thống mà còn phát hiện rủi ro trước khi chúng gây ảnh hưởng đến SLA và trải nghiệm khách hàng.
+- **Nhận diện rủi ro**: Trước tiên cần xác định những tình huống có thể ảnh hưởng đến tính sẵn sàng, hiệu năng hoặc khả năng hoàn thành tác vụ của người dùng.
+- **Theo dõi tín hiệu**: Sau khi xác định rủi ro, hệ thống cần thu thập metric, log và alarm tương ứng để phát hiện dấu hiệu bất thường càng sớm càng tốt.
+- **Phản ứng sự cố**: Khi alarm được kích hoạt, hệ thống có thể gửi thông báo qua Amazon SNS, áp dụng SOP và tiến hành các bước khôi phục cần thiết.
+- **Cải tiến liên tục**: Sau sự cố, đội ngũ cần đánh giá nguyên nhân, xem lại hiệu quả phản ứng và điều chỉnh hệ thống giám sát để ngăn vấn đề tái diễn.
 
-#### Thực Tế Công Việc Và Lộ Trình Phát Triển Của DevOps Engineer
+#### Mô hình kim tự tháp giám sát
 
-Đầu tiên, để hiểu đúng về DevOps thì công việc này không chỉ xoay quanh việc viết CI/CD pipeline, cấu hình đám mây hay quản lý Docker/Kubernetes, mà còn đòi hỏi hiểu rõ cách ứng dụng vận hành trong thực tế.<br>
-**Về kiến thức nền tảng cần có:**
-- Cần ưu tiên nắm vững Linux
-- Kiến thức cơ bản về Networking
-- các ngôn ngữ lập trình (như Python, Golang)
-- Git
-- CI/CD
-- Containers
+Kim tự tháp giám sát cho thấy dữ liệu kỹ thuật ở tầng dưới cần được liên kết với tác động thực tế ở tầng trên:
 
-**Tư duy làm việc:** Công cụ có thể thay đổi nhưng kiến thức nền tảng thì không. Một kỹ sư DevOps giỏi cần rèn luyện tư duy hệ thống, giữ sự tò mò và luôn học hỏi, tự động hóa các công việc nhàm chán, giữ mọi thứ đơn giản và dễ hiểu cho mọi người trong team.
+1. **Customer Experience** - Nằm ở đỉnh kim tự tháp, phản ánh khả năng người dùng cuối hoàn thành hành trình và có được trải nghiệm mong đợi.
+2. **Business** - Theo dõi các chỉ số như tỷ lệ đăng nhập thành công, số lượng đơn hàng, tỷ lệ hoàn thành giao dịch hoặc doanh thu.
+3. **Application** - Quan sát latency, error rate và request count để đánh giá hành vi của ứng dụng.
+4. **Infrastructure** - Theo dõi CPU, memory, disk và network của tài nguyên hạ tầng.
+5. **Cloud Provider** - Nằm ở đáy kim tự tháp, thể hiện trạng thái của các dịch vụ nền tảng như Amazon EC2, Amazon RDS, Elastic Load Balancing và Amazon S3.
 
-#### Định Hướng Nghề Nghiệp Và Kỹ Năng Của Data Analytics Engineer
+- **Healthy infrastructure không đồng nghĩa với happy users**: Health check có thể thành công trong khi người dùng vẫn không đăng nhập, đặt hàng hoặc hoàn thành tác vụ được.
+- **Hạ tầng không thể mô tả toàn bộ chất lượng dịch vụ**: CPU và memory ổn định không có nghĩa là luồng nghiệp vụ đang hoạt động đúng.
+- **Trách nhiệm được chia sẻ**: AWS chịu trách nhiệm về hạ tầng cloud thuộc phạm vi của AWS, còn đội ngũ xây dựng ứng dụng vẫn chịu trách nhiệm với cấu hình, dữ liệu, logic ứng dụng và trải nghiệm người dùng.
+- **Cần hiểu hành trình người dùng**: Monitoring hiệu quả phải bắt đầu từ việc hiểu người dùng muốn làm gì và điều gì có thể khiến hành trình đó thất bại.
 
-- **Thực tế công việc:**  Thay đổi theo từng ngành nghề, tập trung vào xây dựng báo cáo, thiết kế Dashboard theo dõi xu hướng, phân tích nguyên nhân gốc rễ và phối hợp cùng đa phòng ban để giải quyết các bài toán vận hành.
-- **Kỹ năng cần có:** Khả năng tư duy phản biện để nhìn nhận thông tin khách quan, kỹ năng giao tiếp hiệu quả, năng lực kể chuyện với dữ liệu, tìm ra giải pháp tối ưu dựa trên dữ liệu.
-- **Lộ trình thăng tiến:** Người thực thi (Follower) → Người học chủ động (Learner) → Người giải quyết vấn đề (Problem Solver) → Người tư duy hệ thống (System Thinker) →  dẫn dắt (Super Star).
+#### Bảo vệ ứng dụng web với AWS Security Agent
 
-#### Văn Hóa Doanh Nghiệp Tại Các Tập Đoàn Đa Quốc Gia
+- **Pentest thủ công có thể kéo dài**: Các đợt kiểm thử truyền thống thường cần nhiều tuần để chuẩn bị, thực hiện, xác minh và viết báo cáo.
+- **Chi phí chuyên gia cao**: Theo nội dung chia sẻ, chi phí thuê dịch vụ pentest bên ngoài có thể dao động từ 5.000 đến 20.000 USD, tùy phạm vi và độ phức tạp.
+- **Chất lượng phụ thuộc vào chuyên môn**: Kết quả kiểm thử chịu ảnh hưởng lớn bởi kinh nghiệm, phương pháp và khả năng phân tích của pentester.
 
-- **Quy trình tuyển dụng bài bản:** Ứng viên trải qua nhiều vòng sàng lọc từ hệ thống ATS đến phỏng vấn đánh giá năng lực chuyên môn và độ hòa hợp văn hóa.
-- **Môi trường làm việc**: Tạo dựng văn hóa làm việc tôn trọng, quan tâm đến từng cá nhân, đề cao sự đa dạng và khuyến khích sự phát triển toàn diện.
-- **Văn hóa "No-Blame Post-Mortem"**: Khi sự cố vận hành xảy ra, doanh nghiệp tập trung phân tích nguyên nhân gốc rễ để cải tiến hệ thống và quy trình thay vì quy trách nhiệm hay đổ lỗi cho
+#### Frontier Agent và bảo mật toàn bộ vòng đời phát triển
 
-### Những Gì Học Được
+- **Vận hành bởi Amazon Bedrock**: Security Agent có thể lập kế hoạch và thực hiện chuỗi tác vụ bảo mật phức tạp với mức độ tự động hóa cao.
+- **Design Review**: Agent phân tích tài liệu kiến trúc và kiểm tra thiết kế theo những khung tham chiếu như PCI DSS, NIST Cybersecurity Framework và AWS Well-Architected Framework.
+- **Code Security**: Agent quét pull request để tìm lỗ hổng và phát hiện dữ liệu riêng tư bị đưa vào mã nguồn, chẳng hạn mật khẩu hoặc API key.
+- **Active Penetration Testing**: Trong môi trường được chủ sở hữu cho phép, Agent có thể mô phỏng hành vi của người dùng và kiểm chứng lỗ hổng thông qua các chuỗi kiểm thử nhiều bước, sau đó tạo bằng chứng và sơ đồ đường tấn công để hỗ trợ quá trình xác minh.
+- **Tích hợp quy trình phát triển**: Security Agent có thể tích hợp với GitHub hoặc GitLab pull request, nhận xét tại dòng mã liên quan và đề xuất Auto-PR Fixes.
+- **Bảo vệ toàn bộ vòng đời**: Ba lớp Design Review, Code Security và Active Penetration Testing giúp đưa bảo mật vào nhiều giai đoạn thay vì chờ đến cuối dự án.
 
-#### Tư Duy Kiến Trúc & Kỹ Thuật System Design
+#### Những giới hạn cần lưu ý
 
-- **Tư duy mở rộng hệ thống**: Luôn hướng đến một hệ thống có khả năng mở rộng và linh hoạt. Hiểu rõ cách chuyển dịch từ kiến trúc monolithic đơn giản sang kiến trúc phân tán có khả năng chịu tải cao, sử dụng caching và NoSQL.
-- **Tách biệt  nhiệm vụ - Concerns**: Thiết kế dịch vụ KGS riêng biệt có thể giúp giảm tải trực tiếp cho cơ sở dữ liệu chính khi tạo mã URL
-- **Tối ưu hóa độ trễ & Bảo mật**: Kết hợp CloudFront, WAF và API Gateway để bảo vệ hệ thống và mang lại trải nghiệm tối ưu cho người dùng cuối.
+- **Cơ chế xác thực mạnh có thể làm gián đoạn tự động hóa**: MFA, sinh trắc học và mTLS yêu cầu những bước xác minh mà Agent có thể không tự hoàn thành được.
+- **Thiếu ngữ cảnh nghiệp vụ**: Agent có thể gặp khó khăn với lỗi gian lận logic nếu không hiểu sâu quy tắc, vai trò và quy trình của doanh nghiệp.
+- **Độ phức tạp làm tăng thời gian chạy**: Ứng dụng càng lớn và có nhiều luồng, thời gian kiểm thử càng tăng. Vì vậy cần giới hạn phạm vi và theo dõi thời gian thực thi.
+- **Vẫn cần con người giám sát**: Kết quả tự động phải được đội ngũ bảo mật và phát triển đánh giá trước khi xem là kết luận cuối cùng hoặc áp dụng bản sửa lỗi.
+- **Chỉ kiểm thử khi được ủy quyền**: Hoạt động pentest phải được thực hiện trên hệ thống thuộc quyền sở hữu hoặc có sự cho phép rõ ràng, với phạm vi và quy tắc kiểm thử được xác định trước.
 
-#### Tư Duy DevOps & Vận Hành Hệ Thống
+#### Bên trong kỳ thi AWS Cloud Practitioner
 
-- Nắm chắc các **kiến thức cốt lõi** như Linux, Networking, Containers thay vì ỷ lại, chạy theo các công cụ tiện ích luôn thay đổi liên tục theo thời gian.
-- Học cách **Tư duy hệ thống**, nhìn nhận một ứng dụng trong toàn bộ vòng đời (Build, Test, Deploy, Monitor, Fix) thay vì chỉ hoàn thành nhiệm vụ đơn lẻ.
-- Học cách phân tích sự cố, luôn tìm hướng cải tiến hệ thống để ngăn lỗi tái diễn cũng như phòng ngừa những lỗ hổng có thể xảy ra trong tương .
+- **Chứng chỉ nền tảng**: AWS Certified Cloud Practitioner tập trung vào tư duy cloud và bức tranh tổng quan về các dịch vụ AWS.
+- **Không yêu cầu lập trình chuyên sâu**: Kỳ thi không yêu cầu ứng viên viết code hoặc cấu hình chi tiết một hệ thống production.
+- **Domain 1 - Cloud Concepts (24%)**: Kiểm tra lợi ích của cloud, các mô hình triển khai, tính linh hoạt, khả năng mở rộng và nguyên tắc kinh tế cloud.
+- **Domain 2 - Security and Compliance (30%)**: Tập trung vào shared responsibility model, IAM, bảo vệ dữ liệu, tuân thủ và các dịch vụ bảo mật cơ bản.
+- **Domain 3 - Cloud Technology and Services (34%)**: Bao gồm các nhóm dịch vụ compute, storage, database, networking, analytics và những tình huống sử dụng phổ biến.
+- **Domain 4 - Billing, Pricing, and Support (12%)**: Kiểm tra mô hình giá, công cụ quản lý chi phí, AWS Support và các tài nguyên hỗ trợ.
 
-#### Lộ Trình Nghề Nghiệp & Văn Hóa Ứng ử
+### Bài học chính
 
-- Lộ trình phát triển sự nghiệp cần xây dựng qua sản phẩm thực tế, chứng chỉ, đóng góp cộng đồng và không ngừng học hỏi.
-- Bên cạnh kiến thức chuyên môn, kỹ năng mềm đặc biệt là giao tiếp, lắng nghe đóng vai trò quan trọng trong môi trường quốc tế.
+#### Monitoring phải gắn với người dùng
 
-### Ứng Dụng Vào Công Việc
+- Không nên chỉ xây dashboard từ CPU, memory hoặc trạng thái dịch vụ.
+- Mỗi tín hiệu kỹ thuật cần được liên kết với một rủi ro, tác động nghiệp vụ hoặc hành trình người dùng cụ thể.
+- Alarm chỉ có giá trị khi đi kèm người chịu trách nhiệm, kênh thông báo và SOP phản ứng rõ ràng.
+- Sau mỗi sự cố, hệ thống giám sát cần được cập nhật dựa trên những tín hiệu đã bị bỏ sót.
 
-- **Caching**: Tối ưu hóa truy vấn dữ liệu khi đưa Redis làm bộ nhớ đệm
-- **DynamoDB**: Cơ sở dữ liệu NoSQL → dựng các ứng dụng yêu cầu tính bảo mật cao, tốc độ phản hồi cao, linh hoạt, tự động mở rộng.
-- **Automate CI/CD pipelines**: Dùng Python/Golang viết các automation scripts, tối ưu Dockerfile, loại bỏ các manual tasks lặp đi lặp lại.
-- **Enhance Data Storytelling**: Thiết kế Dashboard tập trung vào các business metrics quan trọng và thực hiện RCA.
-- **Build hands-on portfolio**: Tham gia các AWS labs thực tế và chủ động share back trong community để nâng cao practical skills và mở rộng network.
+#### Tự động hóa bảo mật cần đi cùng kiểm soát
 
-### Trải nghiệm trong event
+- AI Agent có thể rút ngắn thời gian đánh giá thiết kế, kiểm tra code và xác minh một số lỗ hổng.
+- Agent không thể thay thế hoàn toàn chuyên gia bảo mật, đặc biệt với lỗi logic nghiệp vụ và các hệ thống xác thực phức tạp.
+- Bảo mật nên được đưa vào toàn bộ vòng đời phát triển thay vì chỉ thực hiện pentest trước ngày phát hành.
+- Các hoạt động kiểm thử chủ động phải có phạm vi, quyền hạn và môi trường an toàn rõ ràng.
 
-Tham gia sự kiện là một trải nghiệm vô cùng giá trị và bổ ích, giúp tôi mở rộng tư duy về thiết kế kiến trúc AWS, hiểu rõ bản chất công việc DevOps, Data Analytics và định hình lộ trình phát triển sự nghiệp công nghệ.
+#### Cloud Practitioner xây dựng nền tảng AWS
 
-#### Học hỏi từ các diễn giả có chuyên môn cao
-- Các diễn giả giàu kinh nghiệm đến từ AWS Community, Endava, Colgate-Palmolive và Kamereo đã đem lại những câu chuyện thực chiến vô cùng phong phú và chân thực.
-- Những chia sẻ không dừng lại ở lý thuyết mà đi sâu vào các bài toán kỹ thuật thực tế cũng như góc nhìn quản trị tại các tập đoàn lớn.
+- Chứng chỉ giúp người học hiểu ngôn ngữ chung của cloud trước khi đi sâu vào kiến trúc hoặc vận hành.
+- Security and Compliance cùng Cloud Technology and Services chiếm phần lớn nội dung, vì vậy cần được ưu tiên trong kế hoạch học.
+- Việc học nên tập trung vào lý do chọn dịch vụ và tình huống sử dụng thay vì ghi nhớ tên dịch vụ một cách rời rạc.
 
-#### Trải nghiệm kỹ thuật thực tế
-- Lắng nghe phân tích từng thành phần trong mô hình URL Shortener giúp tôi hình dung rõ ràng cách kết hợp các dịch vụ cloud để giải quyết bài toán độ trễ và khả năng mở rộng.
-- Hiểu được góc nhìn thực sự từ một DevOps Engineer có kinh nghiệm giúp tôi giải tỏa những hiểu lầm phổ biến về nghề, biết được những góc khuất cũng như khó khăn từ đó xác định phương hướng, lựa chọn đúng trọng tâm học tập.
+### Ứng dụng vào học tập và công việc
 
-#### Tác Động Về Tư Duy & Định Hướng Nghề Nghiệp
-- Tiếp thu tư duy "No-Blame Post-Mortem" giúp thay đổi góc nhìn về sai sót trong công việc: sự cố là cơ hội để củng cố hệ thống chứ không phải để quy trách nhiệm.
-- Thấy rõ lộ trình phát triển từ một sinh viên trở thành AWS Community Builder và AWS Partner, tạo động lực mạnh mẽ cho bản thân trong việc kiên trì tích lũy kiến thức và hướng tới những cột mốc mới.
+- **Xác định SLI, SLO và SLA**: Chọn các chỉ số phản ánh đúng chất lượng dịch vụ, đặt mục tiêu nội bộ và xác định cam kết phù hợp với khách hàng.
 
-#### Kết nối và trao đổi
-- Sự kiện mang không khí cởi mở, tạo cơ hội trao đổi trực tiếp, liên lạc với các chuyên gia trong ngành.
-- Củng cố tầm quan trọng của việc **tham gia cộng đồng** (như AWS Student Builder Group, First Cloud AI Journey) để mở rộng mạng lưới quan hệ và cùng nhau phát triển.
+- **Thiết kế dashboard từ trên xuống**: Bắt đầu từ customer experience và business metrics, sau đó liên kết xuống application, infrastructure và cloud provider metrics.
 
-#### Bài học rút ra
-- Kiến thức nền tảng và tư duy giải quyết vấn đề mới là tài sản lâu dài, công cụ công nghệ sẽ luôn thay đổi.
-- Thành công trong sự nghiệp đòi hỏi sự kết hợp hài hòa giữa năng lực kỹ thuật chuyên sâu và kỹ năng giao tiếp, hòa nhập, thấu hiểu văn hóa.
-- Luôn chủ động học hỏi, xây dựng sản phẩm thực tế và sẵn sàng chia sẻ tri thức ngược lại cho cộng đồng.
+- **Xây dựng quy trình phản ứng**: Kết nối alarm với SNS hoặc kênh thông báo phù hợp, chỉ định người phụ trách và chuẩn bị SOP khôi phục.
 
-#### Một số hình ảnh khi tham gia sự kiện
-* Thêm các hình ảnh của các bạn tại đây
-> Tổng kết lại, sự kiện đem lại góc nhìn mới, những kinh nghiệm, chia sẻ quý báu và không kém phần truyền cảm hứng từ các anh chị diễn giả giúp tôi có cái nhìn rõ ràng hơn về định hướng phát triển trong tương lai cảu bản thân.
+- **Thực hiện post-incident review**: Phân tích nguyên nhân, tín hiệu bị bỏ sót và những thay đổi cần thực hiện sau mỗi sự cố.
+
+- **Đưa bảo mật vào quy trình phát triển**: Kiểm tra kiến trúc trước khi code, scan pull request và chỉ thực hiện active testing trong môi trường được ủy quyền.
+
+- **Theo dõi giới hạn của Agent**: Kiểm soát phạm vi, thời gian chạy, cơ chế xác thực và ngữ cảnh nghiệp vụ trước khi tự động hóa kiểm thử.
+
+- **Chuẩn bị Cloud Practitioner theo domain**: Học theo bốn miền kiến thức, luyện câu hỏi tình huống và tập trung vào shared responsibility, bảo mật, dịch vụ cốt lõi cùng quản lý chi phí.
+
+### Trải nghiệm sự kiện
+
+#### Kết nối SLA với trải nghiệm thực tế
+
+- Nội dung giúp làm rõ rằng monitoring không chỉ dành cho hạ tầng mà phải đo được khả năng người dùng hoàn thành tác vụ.
+- Mô hình kim tự tháp cung cấp một cách trực quan để liên kết trạng thái cloud với application, business và customer experience.
+
+#### Góc nhìn mới về tự động hóa bảo mật
+
+- Security Agent cho thấy AI Agent có thể tham gia từ giai đoạn thiết kế đến kiểm tra mã nguồn và pentest được ủy quyền.
+- Phần giới hạn nhấn mạnh rằng tự động hóa vẫn cần phạm vi rõ ràng, giám sát của con người và sự hiểu biết về nghiệp vụ.
+
+#### Định hướng học AWS rõ ràng hơn
+
+- Cấu trúc bốn domain giúp người mới xác định phạm vi kiến thức cần chuẩn bị cho AWS Cloud Practitioner.
+- Chứng chỉ được nhìn nhận như bước xây dựng nền tảng, không phải mục tiêu thay thế kinh nghiệm thực hành.
+
+#### Một số hình ảnh sự kiện
+
+![Event 2](<../../../images/4-Event/Event2.png>)

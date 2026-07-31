@@ -54,8 +54,4 @@ Participating in **FCAJ - Agentic AI Build Week** was like a massive boost to my
 * **The Art of Integration:** Deeply understanding how teams pieced together API components (Zalo, Drawio, Apify) into a unified Cloud infrastructure architecture, ensuring scalability while strictly optimizing costs.
 * **The Power of Pressure (Hackathon Spirit):** Seeing how Team 3KA built a complex AI recognition system in 24 hours, I realized that our limits can absolutely be broken when working with high focus and a cohesive team.
 
-#### Some memorable moments at the event
-*(Insert images of teams presenting and the hackathon atmosphere here)*
-
-> **Conclusion:**
-> The event vividly portrayed the power of Agentic AI in the hands of passionate young engineers. This was not only a place to show off skills but also a massive energy-recharging station, urging me to constantly experiment, build, and dive deeper into the era of AI Native Apps!
+![Event 3](<../../images/4-Event/Event3.png>)
