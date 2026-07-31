@@ -1,148 +1,111 @@
 ---
-title: "Event 1"
-date: 2024-06-06
+title: "Event 4/7"
+date: 2026-07-04
 weight: 1
 chapter: false
 pre: " <b> 4.1. </b> "
 ---
 
-# Summary Report: “Modern Cloud Infrastructure Engineering”
+# Summary Report: “Lessons Beyond Technology”
 
 ### Event Objectives
 
-- Share the career development roadmap from IT Helpdesk to Senior Sysadmin.
+- Provide practical perspectives on the current technology market and its recruitment requirements.
 
-- Equip foundational knowledge and hands-on practice on application containerization technology with Docker.
+- Share career lessons gained from working in different professional environments.
 
-- Introduce Serverless architecture solutions for real-time games.
+- Help young people understand the importance of initiative, communication, and visibility in the workplace.
 
-- Analyze cyber security solutions combining AWS WAF and Machine Learning NIDS.
+- Introduce ways to use AI as a learning and productivity tool without becoming dependent on it.
 
-- Guide building GraphRAG systems with Amazon Neptune and Amazon Bedrock.
-
-- Share the art of effective teamwork and applying tools in work management.
-
-### Speakers
-
-- **Tran Trung Vinh** - System Administrator at Central Retail Group
-
-- **Bao Huynh** - Junior Cloud Native Developer at Endava Vietnam, Founder / Head Lab - ITea Lab
-
-- **Le Hoang Gia Dai** - AWS Cloud Engineer & Cyber Security Engineer
-
-- **Viet Phat** - AI Major at Swinburne University of Technology
-
-- **Nguyen Quoc Bao** - Speaker
-
-- **Truong Huy Phuoc** - Speaker
+- Encourage a growth mindset, personal accountability, and continuous learning.
 
 ### Key Highlights
 
-#### The Career Journey from IT Helpdesk to Senior Sysadmin
+#### The Technology Market and How Young People Can Prepare
 
-- **Practical roadmap**: Graduating from prestigious universities is not mandatory. The progression from IT Helpdesk → Junior Sysadmin → Senior Sysadmin requires continuously accumulating practical knowledge, self-learning, and deeply understanding infrastructure.
-- **Operational mindset & troubleshooting**: Ensure system availability, handle emergency incidents, and establish monitoring with Kubernetes, Grafana/Prometheus.
-- **MNC interview experience**: Emphasize real projects, architectural design capability, incident response scenarios, and troubleshooting skills.
-- **Advice**: Go deep into 1–2 core skills, prioritize building a real-world portfolio over certifications, and remain persistent.
+- **Rising recruitment expectations**: Companies expect more than basic knowledge. Even interns are increasingly expected to understand emerging technologies and modern working models.
+- **Choose an industry, not only a job title**: In addition to deciding which role to pursue, candidates should research which industries are hiring, such as banking, retail, and technology, as well as the specific requirements of each industry.
+- **Understand “who is hiring”**: Monitoring recruitment demand helps learners prioritize relevant skills instead of studying many unrelated topics without connecting them to real opportunities.
+- **The importance of networking**: Many opportunities are shared internally or through referrals. Building professional relationships and increasing personal visibility are therefore important parts of career development.
+- **Continued cloud adoption**: Enterprise cloud usage continues to grow and creates demand for skilled professionals. However, employers increasingly prioritize candidates with practical experience and a demonstrated ability to create value.
+- **AI as support for students and junior professionals**: AI can accelerate learning, explain concepts, and help reduce the experience gap. Users must still understand the fundamentals and verify AI-generated results.
 
-#### Containerization Fundamentals and Hands-on Practice with Docker
+#### Lessons from a Professional Journey
 
-- **Virtualization vs. Containerization**: Compare the differences between **Traditional Virtualization** using Hypervisors (where each VM runs a separate OS) and **Application Containerization** (which shares the OS kernel, making it lighter, booting extremely fast, and optimizing resources).
-- Master the **core Docker components**:
-    - **Docker Image** - static packaged blueprint
-    - **Docker Container** - executable instance of an Image
-    - **Dockerfile** - packaging script
-    - **Docker Volume** - persistent data storage
-    - **Docker Network** - inter-container connectivity
-- **CLI Command system**: Introduce key command groups that make managing multi-container setups easy, such as `docker run`, `exec`, `logs`, `stop`, `build`, `pull`, `push`, `docker-compose up`, `logs`, `build`.
-- **Real-world applications**: Widely used in CI/CD pipelines, Microservices architecture, Cloud-native applications, and legacy modernization.
+- **Understand and take responsibility for the product**: Developers should not focus only on completing assigned code. They should understand the problem being solved and take responsibility for the results they create.
+- **Understanding requirements is more important than writing beautiful code**: A well-written solution still provides little value if it solves the wrong problem. Requirements should be clarified before implementation decisions are made.
+- **Data scale changes architecture**: A design that works for a small dataset may become ineffective as the system grows. Architecture must be evaluated according to data volume and access patterns.
+- **Balance speed and perfection**: At certain stages, producing a working version to validate an idea is more valuable than attempting to perfect every detail from the beginning.
+- **Start with the problem, not the tool**: Technologies should be selected only after the problem, requirements, and system constraints are understood.
 
-#### Multiplayer Serverless Game Architecture with AWS WebSockets and Godot
+#### Becoming More Visible in the Workplace
 
-- **UDP/ENet connection model**: Ultra-low latency, suitable for FPS/Racing games.
-- **HTTP Polling connection model**: Simple, high latency, resource-intensive.
-- **WebSocket connection model**: Full-duplex two-way communication, reliable, ideal for turn-based games, lobby, chat.
-- **Serverless on AWS**: Game Client → API Gateway WebSocket → AWS Lambda → Amazon DynamoDB.
-- Compare the WebSocket + Lambda model with AWS GameLift when developing games with high real-time physics calculation demands.
+- **Visibility is not attention-seeking**: The goal is not excessive self-promotion. It is to help others understand the skills and value that a person can contribute.
+- **Begin with simple actions**: Proactively greeting others, asking questions, exchanging ideas, and participating in conversations help create natural professional connections.
+- **Silence makes ability difficult to recognize**: Without sharing progress, ideas, or difficulties, teammates and managers may not know what a person can handle or contribute.
+- **Communication is part of professional competence**: The ability to explain problems, listen, and respond improves teamwork and coordination.
 
-#### Cyber Attack Detection Combining AWS WAF and Machine Learning NIDS
+#### Using AI Without Becoming Dependent on It
 
-- **Limitations of WAF**: Effectively protects L7 (HTTP/HTTPS) against SQL Injection, XSS, Bot traffic, but is insufficient to detect Zero-day attacks or complex anomalous behaviors.
-- **ML-based NIDS**: A Network Intrusion Detection System (NIDS) based on trained Machine Learning that helps identify complex attack types such as DoS/DDoS, Brute Force, FTP/SSH attacks.
-- Real-time data streams should be analyzed using ML, correlating NIDS events and AWS WAF on a real-time dashboard to enhance automated monitoring and response capabilities.
-- ML accuracy depends on data quality and handling Class Imbalance; combining WAF with ML optimizes a multi-layered security model.
-
-#### Building Modern GraphRAG Applications with Amazon Bedrock and Amazon Neptune
-
-- **Limitations**: Traditional RAG based on Vector Search and Text Chunks struggles with complex questions or multi-hop query requirements, easily causing Hallucination.
-- **GraphRAG**: Integrates Knowledge Graphs to help LLMs deeply understand linked context and increase answer accuracy.
-- **Architecture on AWS**: Combines Amazon Bedrock with Amazon Neptune / Neptune Analytics.
-- **Deployment models**: Fully Managed with Bedrock + Neptune Analytics or Open-source toolkit with LlamaIndex + Custom routes.
-
-#### The Art of Effective Teamwork and Collaboration Workflow
-
-"Many hands make light work" - Teamwork efficiency vastly surpasses individual effort thanks to synergy and workload sharing.
-- 4 Golden Rules of Teamwork:
-    - **Clear & Shared Goals**: Clear and unified common goals.
-    - **Right Person, Right Place**: Assigning the right person to the right job based on competence.
-    - **Open Communication & Active Listening**: Open communication and active listening.
-    - **Personal Accountability**: Sense of personal responsibility for assigned tasks.
-- **Applying tools to workflows**:
-    - Manage source code and workflow via GitLab through Merge Requests, Code Review.
-    - ClickUp project management tool.
-    - Automated communication channels such as Discord/ClickUp Notifications.
+- **Understand instead of copying**: When AI provides an answer, users should examine its reasoning, assumptions, and method of reaching the conclusion.
+- **Verify the result**: AI-generated content can be inaccurate or unsuitable for the situation. Results should be checked against documentation, data, tests, and foundational knowledge.
+- **AI is a supporting tool**: AI can accelerate learning and work, but it cannot replace human responsibility for thinking and decision-making.
+- **Growth mindset**: Continue asking questions, accept mistakes as part of learning, and actively improve after every experience.
+- **Companies consider multiple factors**: Technical knowledge is important, but attitude, practical experience, exposure to real situations, and development potential also influence career opportunities.
 
 ### Key Takeaways
 
-#### Architectural Thinking & System Design
+#### Career Orientation
 
-- **Real-time Serverless Architecture**: Coordinate API Gateway WebSocket, Lambda, and DynamoDB to build cost-optimized two-way communication systems.
-- **GraphRAG & Knowledge Graph**: How combining Vector DB and Graph DB (Amazon Neptune) enhances multi-hop reasoning capabilities for LLMs.
-- **Application Containerization**: Deeply understand Docker's OS-level virtualization nature to build consistent, easily scalable development environments.
+- Do not focus only on the desired job title; also research industries, companies, and actual recruitment demand.
+- Proactively build relationships, participate in communities, and share the learning process to gain better access to career opportunities.
+- Develop foundational knowledge alongside practical experience and personal projects.
 
-#### Cyber Security & System Operations Thinking
+#### Technical and Problem-Solving Mindset
 
-- **Defense in Depth**: Combining WAF (L7) and Machine Learning NIDS provides a proactive defense mechanism against anomalous behavior.
-- **SysAdmin & Troubleshooting Mindset**: Deeply understand infrastructure fundamentals, manage incidents proactively, and establish continuous monitoring.
-- **Automation & Resource Optimization**: Prioritize CI/CD automation, application packaging with Docker, and database cost optimization.
+- Understand the requirements and problem clearly before choosing an architecture or technology.
+- Consider data volume, scalability, and the operational context of the system.
+- Take responsibility for the solution instead of focusing only on completing code.
+- Balance delivery speed and appropriate quality for each stage of a project.
 
-#### Collaboration Workflow
+#### Communication and Personal Development
 
-- **4 Golden Rules of Teamwork**: Clear goals, right person right place, open communication, and personal accountability.
-- **Career Orientation**: Sustainable growth through core skills and practical products, avoiding chasing certification quantity.
+- Proactively communicate, ask questions, and share ideas in learning and working environments.
+- Treat mistakes as information for improvement rather than a reason to stop experimenting.
+- Maintain a continuous-learning mindset because technology and market requirements are always changing.
 
-### Applying to Work
+### Applying the Lessons to Study and Work
 
-- **Adopt Docker Containerization**: Package microservices using Dockerfile and Docker Compose to standardize Dev/Test/Prod environments.
+- **Research the recruitment market**: Monitor the roles and industries currently hiring to identify which skills should be prioritized.
 
-- **Implement WebSocket Serverless**: Use API Gateway WebSocket and AWS Lambda to build real-time features (chat, game lobby).
+- **Build practical products**: Complete individual or team projects to practise requirement analysis, design, implementation, and responsibility for outcomes.
 
-- **Integrate AWS WAF & ML NIDS**: Configure WAF Web ACLs combined with ML anomaly detection models to protect systems.
+- **Increase positive visibility**: Proactively report progress, ask questions when requirements are unclear, and contribute ideas during teamwork.
 
-- **Deploy GraphRAG with Amazon Bedrock**: Combine Amazon Neptune Analytics and Bedrock to solve complex enterprise document retrieval problems.
+- **Use AI with control**: Use AI to explore approaches, explain knowledge, or review ideas, and then verify the output through documentation and testing.
 
-- **Apply 4 Golden Rules of Teamwork**: Manage Merge Requests on GitLab, track progress on ClickUp, and maintain personal accountability.
+- **Prioritize foundational knowledge**: Continue strengthening programming, databases, computer networking, operating systems, and cloud knowledge to remain adaptable to new technologies.
 
-- **Focus on Core SysAdmin/DevOps Skills**: Practice infrastructure labs, hone troubleshooting skills, and complete a practical portfolio.
+- **Design from the problem**: Before choosing a framework, cloud service, or tool, identify the users, requirements, data, and constraints of the problem.
 
 ### Event Experience
 
-#### Learning from highly skilled speakers
-- Speakers from Central Retail Group, Endava, Swinburne University brought diverse real-world perspectives.
-- Practical sharing covered everything from deep technical topics (WAF, ML NIDS, WebSockets, GraphRAG) to career experiences.
+#### Practical Perspectives on the Market
 
-#### Hands-on technical experience
-- Grasp the deployment scenario of Serverless WebSocket with Godot Engine and how to handle client disconnects.
-- Understand how combining ML with AWS WAF protects systems and how GraphRAG is applied to modern AI.
+- The sessions helped participants understand that opportunities remain available, but expectations for skills and practical experience are becoming more demanding.
+- Real-world stories demonstrated that career planning should respond to business needs instead of simply following popular technology names.
 
-#### Networking and exchange
-- An open atmosphere helped connect students, developers, and industry experts.
-- Reinforced bonding spirit thanks to the 4 golden rules of teamwork and digital collaboration tools.
+#### Connecting Technology with Human Skills
 
-#### Lessons learned
-- Foundational knowledge (Linux, Networking, Docker, Cloud) and problem-solving mindsets are core assets.
-- Emerging technologies (AI/ML, GraphRAG, Serverless) must go hand in hand with cyber security thinking and teamwork skills.
+- The event focused not only on technical knowledge but also on initiative, communication, accountability, and adaptability.
+- Visibility and networking were presented as professional skills that should be developed naturally and sincerely.
 
-#### Some event photos
-*Add your event photos here*
-> Overall, the event provided not only technical knowledge but also transformed my mindset regarding application design, system modernization, and more effective cross-team collaboration.
+#### Lessons About AI and a Growth Mindset
+
+- AI provides significant advantages for learning, but its real value appears only when users understand, verify, and remain responsible for the result.
+- A growth mindset helps young professionals continue developing in an industry that changes rapidly.
+
+#### Some Event Photos
+
+![Event 1](<../../images/4-Event/Event1.png>)
