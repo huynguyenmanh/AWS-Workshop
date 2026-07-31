@@ -13,7 +13,7 @@ In this section, we will conduct end-to-end testing of the User Authentication f
 1. **Access the Web Application:**
    * Open your browser and navigate to the **CloudFront HTTPS Distribution** domain URL (e.g., `https://d3jw5vxof6iq0j.cloudfront.net`).
 
-   ![CloudFront App Interface](/images/5-Workshop/5.5-testing/01-cloudfront-app.jpg)
+   ![CloudFront App Interface](../../../images/5-Workshop/5.5-testing/01-cloudfront-app.jpg)
 
 2. **Sign Up a New Account:**
    * Click the **Sign Up** button.
@@ -29,4 +29,4 @@ In this section, we will conduct end-to-end testing of the User Authentication f
      * The system successfully authenticates and issues a secure **Cognito JWT Access Token**.
      * The token is safely persisted in the browser's **LocalStorage** for subsequent authorized REST API requests sent to Amazon API Gateway.
 
-   ![Successful Login & JWT Token in LocalStorage](/images/5-Workshop/5.5-testing/02-cognito-auth.jpg)
+   ![Successful Login & JWT Token in LocalStorage](../../../images/5-Workshop/5.5-testing/02-cognito-auth.jpg)

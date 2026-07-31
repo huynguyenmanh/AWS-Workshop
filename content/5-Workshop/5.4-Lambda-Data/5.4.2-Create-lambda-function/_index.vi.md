@@ -6,8 +6,6 @@ chapter: false
 pre: "<b> 5.4.2 </b>"
 ---
 
-# Tạo Lambda function
-
 Dự án sử dụng một Lambda router để xử lý toàn bộ route backend.
 
 ## 1. Tạo execution role

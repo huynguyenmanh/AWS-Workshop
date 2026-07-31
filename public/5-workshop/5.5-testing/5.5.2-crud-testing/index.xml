@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
 	<channel>
-		<title>Testing Task &amp; Note Management (CRUD Operations) on Internship Report</title>
+		<title>Testing Task &amp; Note Management (CRUD &amp; DynamoDB) on Internship Report</title>
 		<link>http://localhost:1313/fcj-workshop-template/5-workshop/5.5-testing/5.5.2-crud-testing/</link>
-		<description>Recent content in Testing Task &amp; Note Management (CRUD Operations) on Internship Report</description>
+		<description>Recent content in Testing Task &amp; Note Management (CRUD &amp; DynamoDB) on Internship Report</description>
 		<generator>Hugo</generator>
 		<language>en</language>
 		

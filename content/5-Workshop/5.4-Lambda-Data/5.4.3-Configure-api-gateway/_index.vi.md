@@ -6,8 +6,6 @@ chapter: false
 pre: "<b> 5.4.3 </b>"
 ---
 
-# Cấu hình API Gateway
-
 Sử dụng Amazon API Gateway **HTTP API** vì Lambda router đang đọc event theo
 cấu trúc HTTP API v2:
 
@@ -28,7 +26,7 @@ Mở **API Gateway → Create API → HTTP API → Build**.
 
 Khi tạo integration bằng console, API Gateway có thể tự thêm quyền invoke vào
 resource policy của Lambda.
-![API](<../../../images/5-Workshop/5.4-Lambda-S3/Screenshot 2026-07-30 173911.png>)
+![API](<../../../../images/5-Workshop/5.4-Lambda-S3/Screenshot 2026-07-30 173911.png>)
 ## 2. Tạo route
 
 Trỏ tất cả route sau vào cùng một Lambda integration.
@@ -52,7 +50,7 @@ Phải dùng đúng method và tên path parameter. Ví dụ không đổi
 
 `openapi.yaml` hiện tại chỉ dùng để mô tả API. Tệp này chưa có AWS integration
 URI để tự động tạo đầy đủ integration.
-![Routes](<../../../images/5-Workshop/5.4-Lambda-S3/Screenshot 2026-07-30 173822.png>)
+![Routes](<../../../../images/5-Workshop/5.4-Lambda-S3/Screenshot 2026-07-30 173822.png>)
 ## 3. Tạo Cognito JWT authorizer
 
 Mở HTTP API, chọn **Authorization → Manage authorizers → Create** và cấu hình:
@@ -78,7 +76,7 @@ Authorization: Bearer COGNITO_ACCESS_TOKEN
 
 Phải dùng access token, không dùng Cognito ID token. Backend truyền token này
 cho Cognito `GetUser`.
-![JWT Authorizier](<../../../images/5-Workshop/5.4-Lambda-S3/Screenshot 2026-07-30 173931.png>)
+![JWT Authorizier](<../../../../images/5-Workshop/5.4-Lambda-S3/Screenshot 2026-07-30 173931.png>)
 ## 4. Cấu hình CORS cho HTTP API
 
 Mở **CORS** và dùng:
@@ -102,7 +100,7 @@ Không thêm path vào origin. `https://example.com/app` không phải origin;
 CORS của HTTP API có thể xử lý preflight trước khi request tới Lambda. Nhánh
 `OPTIONS` trong Lambda vẫn có thể giữ lại nhưng không nên là cấu hình CORS duy
 nhất, vì cả response thành công và response lỗi đều cần CORS header nhất quán.
-![CORS](<../../../images/5-Workshop/5.4-Lambda-S3/Screenshot 2026-07-30 173959.png>)
+![CORS](<../../../../images/5-Workshop/5.4-Lambda-S3/Screenshot 2026-07-30 173959.png>)
 ## 5. Deploy và ghi lại invoke URL
 
 Nếu dùng `$default` cùng automatic deployment, route mới sẽ được publish tự

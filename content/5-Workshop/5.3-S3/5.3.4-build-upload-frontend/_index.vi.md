@@ -30,11 +30,11 @@ Mã nguồn Frontend (React/Vite) cần được biên dịch (build) thành cá
    * *Lưu ý quan trọng: Bạn phải upload các file bên trong chứ không upload cả thư mục `dist`. Đảm bảo file `index.html` nằm ở ngay thư mục gốc của bucket.*
    * Cuộn xuống dưới cùng và nhấp vào nút **Upload**. Đợi vài phút để quá trình tải lên hoàn tất, sau đó nhấn **Close**.
 
-![Upload files to S3](../../../images/5-Workshop/5.3-S3/s3-upload-files.png)
+![Upload files to S3](../../../../images/5-Workshop/5.3-S3/s3-upload-files.png)
 
 3. **Kiểm tra thành quả:**
    * Mở dịch vụ **CloudFront** trên AWS Console.
    * Tìm Distribution bạn đã tạo ở bước 5.3.2 và sao chép đường dẫn tại cột **Domain name** (ví dụ: `d123456...cloudfront.net`).
    * Mở một tab mới trên trình duyệt và dán đường dẫn này vào. Bạn sẽ thấy giao diện trang web Frontend của mình được tải lên nhanh chóng và bảo mật qua giao thức HTTPS!
 
-![Test CloudFront Domain](../../../images/5-Workshop/5.3-S3/cloudfront-test.png)
+![Test CloudFront Domain](../../../../images/5-Workshop/5.3-S3/cloudfront-test.png)

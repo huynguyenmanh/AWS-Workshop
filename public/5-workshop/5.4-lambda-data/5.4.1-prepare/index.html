@@ -1,0 +1,2016 @@
+<!DOCTYPE html>
+<html lang="en" class="js csstransforms3d">
+  <head><script src="/fcj-workshop-template/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=fcj-workshop-template/livereload" data-no-instant defer></script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="Hugo 0.164.0">
+    <meta
+  name="description"
+  content=""
+/>
+<meta name="author" content="thienlh@thienlu.com" />
+
+    <link rel="icon" href="/fcj-workshop-template/images/favicon.png" type="image/png">
+
+    <title>Prepare the backend :: Internship Report</title>
+
+    
+    <link href="/fcj-workshop-template/css/nucleus.css?1785511214" rel="stylesheet">
+    <link href="/fcj-workshop-template/css/fontawesome-all.min.css?1785511214" rel="stylesheet">
+    <link href="/fcj-workshop-template/css/hybrid.css?1785511214" rel="stylesheet">
+    <link href="/fcj-workshop-template/css/featherlight.min.css?1785511214" rel="stylesheet">
+    <link href="/fcj-workshop-template/css/perfect-scrollbar.min.css?1785511214" rel="stylesheet">
+    <link href="/fcj-workshop-template/css/auto-complete.css?1785511214" rel="stylesheet">
+    <link href="/fcj-workshop-template/css/atom-one-dark-reasonable.css?1785511214" rel="stylesheet">
+    <link href="/fcj-workshop-template/css/theme.css?1785511214" rel="stylesheet">
+    <link href="/fcj-workshop-template/css/hugo-theme.css?1785511214" rel="stylesheet">
+    
+    <link href="/fcj-workshop-template/css/theme-workshop.css?1785511214" rel="stylesheet">
+    
+    
+
+    <script src="/fcj-workshop-template/js/jquery-3.3.1.min.js?1785511214"></script>
+
+    <style>
+      :root #header + #content > #left > #rlblock_left{
+          display:none !important;
+      }
+      
+    </style>
+    
+
+  </head>
+  <body class="" data-url="/fcj-workshop-template/5-workshop/5.4-lambda-data/5.4.1-prepare/">
+    <nav
+  id="sidebar"
+  class="showVisitedLinks"
+>
+   
+  <div id="header-wrapper">
+    <div id="header"><a id="logo" href="/">
+
+<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 30" width="30%"><defs><style>.cls-1{fill:#fff;}.cls-2{fill:#fff;fill-rule:evenodd;}</style></defs><title>AWS-Logo_White-Color</title><path class="cls-1" d="M14.09,10.85a4.7,4.7,0,0,0,.19,1.48,7.73,7.73,0,0,0,.54,1.19.77.77,0,0,1,.12.38.64.64,0,0,1-.32.49l-1,.7a.83.83,0,0,1-.44.15.69.69,0,0,1-.49-.23,3.8,3.8,0,0,1-.6-.77q-.25-.42-.51-1a6.14,6.14,0,0,1-4.89,2.3,4.54,4.54,0,0,1-3.32-1.19,4.27,4.27,0,0,1-1.22-3.2A4.28,4.28,0,0,1,3.61,7.75,6.06,6.06,0,0,1,7.69,6.46a12.47,12.47,0,0,1,1.76.13q.92.13,1.91.36V5.73a3.65,3.65,0,0,0-.79-2.66A3.81,3.81,0,0,0,7.86,2.3a7.71,7.71,0,0,0-1.79.22,12.78,12.78,0,0,0-1.79.57,4.55,4.55,0,0,1-.58.22l-.26,0q-.35,0-.35-.52V2a1.09,1.09,0,0,1,.12-.58,1.2,1.2,0,0,1,.47-.35A10.88,10.88,0,0,1,5.77.32,10.19,10.19,0,0,1,8.36,0a6,6,0,0,1,4.35,1.35,5.49,5.49,0,0,1,1.38,4.09ZM7.34,13.38a5.36,5.36,0,0,0,1.72-.31A3.63,3.63,0,0,0,10.63,12,2.62,2.62,0,0,0,11.19,11a5.63,5.63,0,0,0,.16-1.44v-.7a14.35,14.35,0,0,0-1.53-.28,12.37,12.37,0,0,0-1.56-.1,3.84,3.84,0,0,0-2.47.67A2.34,2.34,0,0,0,5,11a2.35,2.35,0,0,0,.61,1.76A2.4,2.4,0,0,0,7.34,13.38Zm13.35,1.8a1,1,0,0,1-.64-.16,1.3,1.3,0,0,1-.35-.65L15.81,1.51a3,3,0,0,1-.15-.67.36.36,0,0,1,.41-.41H17.7a1,1,0,0,1,.65.16,1.4,1.4,0,0,1,.33.65l2.79,11,2.59-11A1.17,1.17,0,0,1,24.39.6a1.1,1.1,0,0,1,.67-.16H26.4a1.1,1.1,0,0,1,.67.16,1.17,1.17,0,0,1,.32.65L30,12.39,32.88,1.25A1.39,1.39,0,0,1,33.22.6a1,1,0,0,1,.65-.16h1.54a.36.36,0,0,1,.41.41,1.36,1.36,0,0,1,0,.26,3.64,3.64,0,0,1-.12.41l-4,12.86a1.3,1.3,0,0,1-.35.65,1,1,0,0,1-.64.16H29.25a1,1,0,0,1-.67-.17,1.26,1.26,0,0,1-.32-.67L25.67,3.64,23.11,14.34a1.26,1.26,0,0,1-.32.67,1,1,0,0,1-.67.17Zm21.36.44a11.28,11.28,0,0,1-2.56-.29,7.44,7.44,0,0,1-1.92-.67,1,1,0,0,1-.61-.93v-.84q0-.52.38-.52a.9.9,0,0,1,.31.06l.42.17a8.77,8.77,0,0,0,1.83.58,9.78,9.78,0,0,0,2,.2,4.48,4.48,0,0,0,2.43-.55,1.76,1.76,0,0,0,.86-1.57,1.61,1.61,0,0,0-.45-1.16A4.29,4.29,0,0,0,43,9.22l-2.41-.76A5.15,5.15,0,0,1,38,6.78a3.94,3.94,0,0,1-.83-2.41,3.7,3.7,0,0,1,.45-1.85,4.47,4.47,0,0,1,1.19-1.37A5.27,5.27,0,0,1,40.51.29,7.4,7.4,0,0,1,42.6,0a8.87,8.87,0,0,1,1.12.07q.57.07,1.08.19t.95.26a4.27,4.27,0,0,1,.7.29,1.59,1.59,0,0,1,.49.41.94.94,0,0,1,.15.55v.79q0,.52-.38.52a1.76,1.76,0,0,1-.64-.2,7.74,7.74,0,0,0-3.2-.64,4.37,4.37,0,0,0-2.21.47,1.6,1.6,0,0,0-.79,1.48,1.58,1.58,0,0,0,.49,1.18,4.94,4.94,0,0,0,1.83.92L44.55,7a5.08,5.08,0,0,1,2.57,1.6A3.76,3.76,0,0,1,47.9,11a4.21,4.21,0,0,1-.44,1.93,4.4,4.4,0,0,1-1.21,1.47,5.43,5.43,0,0,1-1.85.93A8.25,8.25,0,0,1,42.05,15.62Z"></path><path class="cls-2" d="M45.19,23.81C39.72,27.85,31.78,30,25,30A36.64,36.64,0,0,1,.22,20.57c-.51-.46-.06-1.09.56-.74A49.78,49.78,0,0,0,25.53,26.4,49.23,49.23,0,0,0,44.4,22.53C45.32,22.14,46.1,23.14,45.19,23.81Z"></path><path class="cls-2" d="M47.47,21.21c-.7-.9-4.63-.42-6.39-.21-.53.06-.62-.4-.14-.74,3.13-2.2,8.27-1.57,8.86-.83s-.16,5.89-3.09,8.35c-.45.38-.88.18-.68-.32C46.69,25.8,48.17,22.11,47.47,21.21Z"></path></svg>
+
+</a>
+</div>
+     <div class="searchbox">
+    <label for="search-by"><i class="fas fa-search"></i></label>
+    <input data-search-input id="search-by" type="search" placeholder="Search...">
+    <span data-search-clear=""><i class="fas fa-times"></i></span>
+</div>
+
+<script type="text/javascript" src="/fcj-workshop-template/js/lunr.min.js?1785511214"></script>
+<script type="text/javascript" src="/fcj-workshop-template/js/auto-complete.js?1785511214"></script>
+<script type="text/javascript">
+    
+        var baseurl = "http:\/\/localhost:1313\/fcj-workshop-template\/";
+    
+</script>
+<script type="text/javascript" src="/fcj-workshop-template/js/search.js?1785511214"></script>
+ 
+  </div>
+
+  <div class="highlightable">
+    <ul class="topics">
+               
+<li
+  data-nav-id="/fcj-workshop-template/1-worklog/"
+  title="Worklog"
+  class="dd-item 
+        
+        
+        
+        "
+>
+  <a href="/fcj-workshop-template/1-worklog/">
+     <b> 1. </b> Worklog 
+    <i class="fas fa-check read-icon"></i>
+    
+  </a>
+   
+  <ul>
+          
+            
+<li
+  data-nav-id="/fcj-workshop-template/1-worklog/1.1-week1/"
+  title="Week 1 Worklog"
+  class="dd-item 
+        
+        
+        
+        "
+>
+  <a href="/fcj-workshop-template/1-worklog/1.1-week1/">
+     <b> 1.1. </b> Week 1 Worklog 
+    <i class="fas fa-check read-icon"></i>
+    
+  </a>
+   
+</li>
+    
+            
+<li
+  data-nav-id="/fcj-workshop-template/1-worklog/1.2-week2/"
+  title="Week 2 Worklog"
+  class="dd-item 
+        
+        
+        
+        "
+>
+  <a href="/fcj-workshop-template/1-worklog/1.2-week2/">
+     <b> 1.2. </b> Week 2 Worklog 
+    <i class="fas fa-check read-icon"></i>
+    
+  </a>
+   
+</li>
+    
+            
+<li
+  data-nav-id="/fcj-workshop-template/1-worklog/1.3-week3/"
+  title="Week 3 Worklog"
+  class="dd-item 
+        
+        
+        
+        "
+>
+  <a href="/fcj-workshop-template/1-worklog/1.3-week3/">
+     <b> 1.3. </b> Week 3 Worklog 
+    <i class="fas fa-check read-icon"></i>
+    
+  </a>
+   
+</li>
+    
+            
+<li
+  data-nav-id="/fcj-workshop-template/1-worklog/1.4-week4/"
+  title="Week 4 Worklog"
+  class="dd-item 
+        
+        
+        
+        "
+>
+  <a href="/fcj-workshop-template/1-worklog/1.4-week4/">
+     <b> 1.4. </b> Week 4 Worklog 
+    <i class="fas fa-check read-icon"></i>
+    
+  </a>
+   
+</li>
+    
+            
+<li
+  data-nav-id="/fcj-workshop-template/1-worklog/1.5-week5/"
+  title="Week 5 Worklog"
+  class="dd-item 
+        
+        
+        
+        "
+>
+  <a href="/fcj-workshop-template/1-worklog/1.5-week5/">
+     <b> 1.5. </b> Week 5 Worklog 
+    <i class="fas fa-check read-icon"></i>
+    
+  </a>
+   
+</li>
+    
+            
+<li
+  data-nav-id="/fcj-workshop-template/1-worklog/1.6-week6/"
+  title="Week 6 Worklog"
+  class="dd-item 
+        
+        
+        
+        "
+>
+  <a href="/fcj-workshop-template/1-worklog/1.6-week6/">
+     <b> 1.6. </b> Week 6 Worklog 
+    <i class="fas fa-check read-icon"></i>
+    
+  </a>
+   
+</li>
+    
+            
+<li
+  data-nav-id="/fcj-workshop-template/1-worklog/1.7-week7/"
+  title="Week 7 Worklog"
+  class="dd-item 
+        
+        
+        
+        "
+>
+  <a href="/fcj-workshop-template/1-worklog/1.7-week7/">
+     <b> 1.7. </b> Week 7 Worklog 
+    <i class="fas fa-check read-icon"></i>
+    
+  </a>
+   
+</li>
+    
+            
+<li
+  data-nav-id="/fcj-workshop-template/1-worklog/1.8-week8/"
+  title="Week 8 Worklog"
+  class="dd-item 
+        
+        
+        
+        "
+>
+  <a href="/fcj-workshop-template/1-worklog/1.8-week8/">
+     <b> 1.8. </b> Week 8 Worklog 
+    <i class="fas fa-check read-icon"></i>
+    
+  </a>
+   
+</li>
+    
+            
+<li
+  data-nav-id="/fcj-workshop-template/1-worklog/1.9-week9/"
+  title="Week 9 Worklog"
+  class="dd-item 
+        
+        
+        
+        "
+>
+  <a href="/fcj-workshop-template/1-worklog/1.9-week9/">
+     <b> 1.9. </b> Week 9 Worklog 
+    <i class="fas fa-check read-icon"></i>
+    
+  </a>
+   
+</li>
+     
+  </ul>
+  
+</li>
+           
+<li
+  data-nav-id="/fcj-workshop-template/2-proposal/"
+  title="Proposal"
+  class="dd-item 
+        
+        
+        
+        "
+>
+  <a href="/fcj-workshop-template/2-proposal/">
+     <b> 2. </b> Proposal 
+    <i class="fas fa-check read-icon"></i>
+    
+  </a>
+   
+</li>
+           
+<li
+  data-nav-id="/fcj-workshop-template/3-blogsposted/"
+  title="Blogs Posted"
+  class="dd-item 
+        
+        
+        
+        "
+>
+  <a href="/fcj-workshop-template/3-blogsposted/">
+     <b> 3. </b> Blogs Posted 
+    <i class="fas fa-check read-icon"></i>
+    
+  </a>
+   
+  <ul>
+          
+            
+<li
+  data-nav-id="/fcj-workshop-template/3-blogsposted/3.1-blog1/"
+  title="Blog 1: Local Data Storage with Amazon S3 in AWS Local Zones"
+  class="dd-item 
+        
+        
+        
+        "
+>
+  <a href="/fcj-workshop-template/3-blogsposted/3.1-blog1/">
+     <b> 3.1. </b> Blog 1: Local Data Storage with Amazon S3 in AWS Local Zones 
+    <i class="fas fa-check read-icon"></i>
+    
+  </a>
+   
+</li>
+    
+            
+<li
+  data-nav-id="/fcj-workshop-template/3-blogsposted/3.2-blog2/"
+  title="Blog 2: Managing AWS Lambda Function Code with Self-Managed Amazon S3 Buckets"
+  class="dd-item 
+        
+        
+        
+        "
+>
+  <a href="/fcj-workshop-template/3-blogsposted/3.2-blog2/">
+     <b> 3.2. </b> Blog 2: Managing AWS Lambda Function Code with Self-Managed Amazon S3 Buckets 
+    <i class="fas fa-check read-icon"></i>
+    
+  </a>
+   
+</li>
+    
+            
+<li
+  data-nav-id="/fcj-workshop-template/3-blogsposted/3.3-blog3/"
+  title="Blog 3: Process Millions of DynamoDB Records Easily with Bulk Executor"
+  class="dd-item 
+        
+        
+        
+        "
+>
+  <a href="/fcj-workshop-template/3-blogsposted/3.3-blog3/">
+     <b> 3.3. </b> Blog 3: Process Millions of DynamoDB Records Easily with Bulk Executor 
+    <i class="fas fa-check read-icon"></i>
+    
+  </a>
+   
+</li>
+     
+  </ul>
+  
+</li>
+           
+<li
+  data-nav-id="/fcj-workshop-template/4-eventparticipated/"
+  title="Events Participated"
+  class="dd-item 
+        
+        
+        
+        "
+>
+  <a href="/fcj-workshop-template/4-eventparticipated/">
+     <b> 4. </b> Events Participated 
+    <i class="fas fa-check read-icon"></i>
+    
+  </a>
+   
+  <ul>
+          
+            
+<li
+  data-nav-id="/fcj-workshop-template/4-eventparticipated/4.2-event3/"
+  title="Event 3"
+  class="dd-item 
+        
+        
+        
+        "
+>
+  <a href="/fcj-workshop-template/4-eventparticipated/4.2-event3/">
+     <b> 4.3. </b> Event 3 
+    <i class="fas fa-check read-icon"></i>
+    
+  </a>
+   
+</li>
+    
+            
+<li
+  data-nav-id="/fcj-workshop-template/4-eventparticipated/4.2-event2/"
+  title="Event 2"
+  class="dd-item 
+        
+        
+        
+        "
+>
+  <a href="/fcj-workshop-template/4-eventparticipated/4.2-event2/">
+     <b> 4.2. </b> Event 2 
+    <i class="fas fa-check read-icon"></i>
+    
+  </a>
+   
+</li>
+    
+            
+<li
+  data-nav-id="/fcj-workshop-template/4-eventparticipated/4.1-event1/"
+  title="Event 1"
+  class="dd-item 
+        
+        
+        
+        "
+>
+  <a href="/fcj-workshop-template/4-eventparticipated/4.1-event1/">
+     <b> 4.1. </b> Event 1 
+    <i class="fas fa-check read-icon"></i>
+    
+  </a>
+   
+</li>
+     
+  </ul>
+  
+</li>
+           
+<li
+  data-nav-id="/fcj-workshop-template/5-workshop/"
+  title="Workshop"
+  class="dd-item 
+        parent
+        
+        
+        "
+>
+  <a href="/fcj-workshop-template/5-workshop/">
+     <b> 5. </b> Workshop 
+    <i class="fas fa-check read-icon"></i>
+    
+  </a>
+   
+  <ul>
+          
+            
+<li
+  data-nav-id="/fcj-workshop-template/5-workshop/5.1-overview/"
+  title="Project Overview"
+  class="dd-item 
+        
+        
+        
+        "
+>
+  <a href="/fcj-workshop-template/5-workshop/5.1-overview/">
+     <b> 5.1. </b> Project Overview 
+    <i class="fas fa-check read-icon"></i>
+    
+  </a>
+   
+</li>
+    
+            
+<li
+  data-nav-id="/fcj-workshop-template/5-workshop/5.2-prerequiste/"
+  title="Preparation Steps"
+  class="dd-item 
+        
+        
+        
+        "
+>
+  <a href="/fcj-workshop-template/5-workshop/5.2-prerequiste/">
+     <b> 5.2. </b> Preparation Steps 
+    <i class="fas fa-check read-icon"></i>
+    
+  </a>
+   
+</li>
+    
+            
+<li
+  data-nav-id="/fcj-workshop-template/5-workshop/5.3-s3/"
+  title="Setup S3 Frontend &amp; CloudFront"
+  class="dd-item 
+        
+        
+        
+        "
+>
+  <a href="/fcj-workshop-template/5-workshop/5.3-s3/">
+     <b> 5.3. </b> Setup S3 Frontend &amp; CloudFront 
+    <i class="fas fa-check read-icon"></i>
+    
+  </a>
+   
+  <ul>
+          
+            
+<li
+  data-nav-id="/fcj-workshop-template/5-workshop/5.3-s3/5.3.1-create-s3/"
+  title="Create S3 Bucket"
+  class="dd-item 
+        
+        
+        
+        "
+>
+  <a href="/fcj-workshop-template/5-workshop/5.3-s3/5.3.1-create-s3/">
+     <b> 5.3.1. </b> Create S3 Bucket 
+    <i class="fas fa-check read-icon"></i>
+    
+  </a>
+   
+</li>
+    
+            
+<li
+  data-nav-id="/fcj-workshop-template/5-workshop/5.3-s3/5.3.2-config-cloudfront/"
+  title="Configure CloudFront &amp; OAC"
+  class="dd-item 
+        
+        
+        
+        "
+>
+  <a href="/fcj-workshop-template/5-workshop/5.3-s3/5.3.2-config-cloudfront/">
+     <b> 5.3.2. </b> Configure CloudFront &amp; OAC 
+    <i class="fas fa-check read-icon"></i>
+    
+  </a>
+   
+</li>
+    
+            
+<li
+  data-nav-id="/fcj-workshop-template/5-workshop/5.3-s3/5.3.3-update-s3-policy/"
+  title="Update S3 Bucket Policy"
+  class="dd-item 
+        
+        
+        
+        "
+>
+  <a href="/fcj-workshop-template/5-workshop/5.3-s3/5.3.3-update-s3-policy/">
+     <b> 5.3.3. </b> Update S3 Bucket Policy 
+    <i class="fas fa-check read-icon"></i>
+    
+  </a>
+   
+</li>
+    
+            
+<li
+  data-nav-id="/fcj-workshop-template/5-workshop/5.3-s3/5.3.4-build-upload-frontend/"
+  title="Build and Upload Frontend"
+  class="dd-item 
+        
+        
+        
+        "
+>
+  <a href="/fcj-workshop-template/5-workshop/5.3-s3/5.3.4-build-upload-frontend/">
+     <b> 5.3.4. </b> Build and Upload Frontend 
+    <i class="fas fa-check read-icon"></i>
+    
+  </a>
+   
+</li>
+     
+  </ul>
+  
+</li>
+    
+            
+<li
+  data-nav-id="/fcj-workshop-template/5-workshop/5.4-lambda-data/"
+  title="Deploy the backend"
+  class="dd-item 
+        parent
+        
+        
+        "
+>
+  <a href="/fcj-workshop-template/5-workshop/5.4-lambda-data/">
+    <b> 5.4 </b>Deploy the backend 
+    <i class="fas fa-check read-icon"></i>
+    
+  </a>
+   
+  <ul>
+          
+            
+<li
+  data-nav-id="/fcj-workshop-template/5-workshop/5.4-lambda-data/5.4.1-prepare/"
+  title="Prepare the backend"
+  class="dd-item 
+        
+        active
+        
+        "
+>
+  <a href="/fcj-workshop-template/5-workshop/5.4-lambda-data/5.4.1-prepare/">
+    <b> 5.4.1 </b>Prepare the backend 
+    <i class="fas fa-check read-icon"></i>
+    
+  </a>
+   
+</li>
+    
+            
+<li
+  data-nav-id="/fcj-workshop-template/5-workshop/5.4-lambda-data/5.4.2-create-lambda-function/"
+  title="Create the Lambda function"
+  class="dd-item 
+        
+        
+        
+        "
+>
+  <a href="/fcj-workshop-template/5-workshop/5.4-lambda-data/5.4.2-create-lambda-function/">
+    <b> 5.4.2 </b>Create the Lambda function 
+    <i class="fas fa-check read-icon"></i>
+    
+  </a>
+   
+</li>
+    
+            
+<li
+  data-nav-id="/fcj-workshop-template/5-workshop/5.4-lambda-data/5.4.3-configure-api-gateway/"
+  title="Configure API Gateway"
+  class="dd-item 
+        
+        
+        
+        "
+>
+  <a href="/fcj-workshop-template/5-workshop/5.4-lambda-data/5.4.3-configure-api-gateway/">
+    <b> 5.4.3 </b>Configure API Gateway 
+    <i class="fas fa-check read-icon"></i>
+    
+  </a>
+   
+</li>
+     
+  </ul>
+  
+</li>
+    
+            
+<li
+  data-nav-id="/fcj-workshop-template/5-workshop/5.5-testing/"
+  title="Testing the system"
+  class="dd-item 
+        
+        
+        
+        "
+>
+  <a href="/fcj-workshop-template/5-workshop/5.5-testing/">
+     <b> 5.5. </b> Testing the system 
+    <i class="fas fa-check read-icon"></i>
+    
+  </a>
+   
+  <ul>
+          
+            
+<li
+  data-nav-id="/fcj-workshop-template/5-workshop/5.5-testing/5.5.1-auth-testing/"
+  title="User Authentication Testing (Amazon Cognito)"
+  class="dd-item 
+        
+        
+        
+        "
+>
+  <a href="/fcj-workshop-template/5-workshop/5.5-testing/5.5.1-auth-testing/">
+     <b> 5.5.1. </b> User Authentication Testing (Amazon Cognito) 
+    <i class="fas fa-check read-icon"></i>
+    
+  </a>
+   
+</li>
+    
+            
+<li
+  data-nav-id="/fcj-workshop-template/5-workshop/5.5-testing/5.5.2-crud-testing/"
+  title="Testing Task &amp; Note Management (CRUD &amp; DynamoDB)"
+  class="dd-item 
+        
+        
+        
+        "
+>
+  <a href="/fcj-workshop-template/5-workshop/5.5-testing/5.5.2-crud-testing/">
+     <b> 5.5.2. </b> Testing Task &amp; Note Management (CRUD &amp; DynamoDB) 
+    <i class="fas fa-check read-icon"></i>
+    
+  </a>
+   
+</li>
+    
+            
+<li
+  data-nav-id="/fcj-workshop-template/5-workshop/5.5-testing/5.5.3-s3-upload-testing/"
+  title="Testing Attachment Uploads via S3 Presigned URLs"
+  class="dd-item 
+        
+        
+        
+        "
+>
+  <a href="/fcj-workshop-template/5-workshop/5.5-testing/5.5.3-s3-upload-testing/">
+     <b> 5.5.3. </b> Testing Attachment Uploads via S3 Presigned URLs 
+    <i class="fas fa-check read-icon"></i>
+    
+  </a>
+   
+</li>
+    
+            
+<li
+  data-nav-id="/fcj-workshop-template/5-workshop/5.5-testing/5.5.4-security-testing/"
+  title="Testing API Gateway JWT Security &amp; CORS"
+  class="dd-item 
+        
+        
+        
+        "
+>
+  <a href="/fcj-workshop-template/5-workshop/5.5-testing/5.5.4-security-testing/">
+     <b> 5.5.4. </b> Testing API Gateway JWT Security &amp; CORS 
+    <i class="fas fa-check read-icon"></i>
+    
+  </a>
+   
+</li>
+    
+            
+<li
+  data-nav-id="/fcj-workshop-template/5-workshop/5.5-testing/5.5.5-monitoring-testing/"
+  title="Testing Monitoring &amp; Logging via Amazon CloudWatch"
+  class="dd-item 
+        
+        
+        
+        "
+>
+  <a href="/fcj-workshop-template/5-workshop/5.5-testing/5.5.5-monitoring-testing/">
+     <b> 5.5.5. </b> Testing Monitoring &amp; Logging via Amazon CloudWatch 
+    <i class="fas fa-check read-icon"></i>
+    
+  </a>
+   
+</li>
+     
+  </ul>
+  
+</li>
+    
+            
+<li
+  data-nav-id="/fcj-workshop-template/5-workshop/5.6-cleanup/"
+  title="Clean up"
+  class="dd-item 
+        
+        
+        
+        "
+>
+  <a href="/fcj-workshop-template/5-workshop/5.6-cleanup/">
+     <b> 5.6. </b> Clean up 
+    <i class="fas fa-check read-icon"></i>
+    
+  </a>
+   
+</li>
+     
+  </ul>
+  
+</li>
+           
+<li
+  data-nav-id="/fcj-workshop-template/6-self-evaluation/"
+  title="Self-Assessment"
+  class="dd-item 
+        
+        
+        
+        "
+>
+  <a href="/fcj-workshop-template/6-self-evaluation/">
+     <b> 6. </b> Self-Assessment 
+    <i class="fas fa-check read-icon"></i>
+    
+  </a>
+   
+</li>
+           
+<li
+  data-nav-id="/fcj-workshop-template/7-feedback/"
+  title="Sharing and Feedback"
+  class="dd-item 
+        
+        
+        
+        "
+>
+  <a href="/fcj-workshop-template/7-feedback/">
+     <b> 7. </b> Sharing and Feedback 
+    <i class="fas fa-check read-icon"></i>
+    
+  </a>
+   
+</li>
+    
+    </ul>
+
+     
+    <section id="shortcuts">
+      <h3>
+        More
+      </h3>
+      <ul>
+        
+        <li>
+          <a class="padding" href="https://awsstudygroup.com"
+            ><i class='fab fa-aws'></i> AWS Study Group - Blog</a
+          >
+        </li>
+        
+        <li>
+          <a class="padding" href="https://www.facebook.com/groups/awsstudygroupfcj"
+            ><i class='fab fa-facebook'></i> AWS Study Group - FB Group</a
+          >
+        </li>
+        
+      </ul>
+    </section>
+     
+    <section id="prefooter">
+      <hr />
+      <ul>
+        
+        <li>
+          <a class="padding">
+            <i class="fas fa-language fa-fw"></i>
+            <div class="select-style">
+              <select id="select-language" onchange="location = this.value;">
+                       
+                <option
+                  id="en"
+                  value="http://localhost:1313/fcj-workshop-template/5-workshop/5.4-lambda-data/5.4.1-prepare/"
+                  selected
+                >
+                  English
+                </option>
+                            
+                <option
+                  id="vi"
+                  value="http://localhost:1313/fcj-workshop-template/vi/5-workshop/5.4-lambda-data/5.4.1-prepare/"
+                >
+                  Tiếng Việt
+                </option>
+                   
+              </select>
+              <svg
+                version="1.1"
+                id="Capa_1"
+                xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink"
+                x="0px"
+                y="0px"
+                width="255px"
+                height="255px"
+                viewBox="0 0 255 255"
+                style="enable-background: new 0 0 255 255"
+                xml:space="preserve"
+              >
+                <g>
+                  <g id="arrow-drop-down">
+                    <polygon points="0,63.75 127.5,191.25 255,63.75 		" />
+                  </g>
+                </g>
+              </svg>
+            </div>
+          </a>
+        </li>
+         
+        <li>
+          <a class="padding" href="#" data-clear-history-toggle=""
+            ><i class="fas fa-history fa-fw"></i> Clear History</a
+          >
+        </li>
+        
+      </ul>
+    </section>
+    
+    <section id="footer"><left>
+    <br>
+    <br>
+    <b> Last Updated </b> <br>
+    <i>
+        <font color=orange>31-07-2026</font>
+    </i>
+</left>
+<left>
+    <br>
+    <br>
+    <b> Team </b> <br>
+    <i>
+        <a href="https://www.facebook.com/groups/660548818043427" style="color:orange">First Cloud AI Journey</a>
+    </i>
+</left>
+
+<script async defer src="https://buttons.github.io/buttons.js"></script></section>
+  </div>
+</nav>
+
+
+
+
+        <section id="body">
+        <div id="overlay"></div>
+        <div class="padding highlightable">
+              
+              <div>
+                <div id="top-bar">
+                
+                
+                <div id="breadcrumbs" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
+                    <span id="sidebar-toggle-span">
+                        <a href="#" id="sidebar-toggle" data-sidebar-toggle="">
+                          <i class="fas fa-bars"></i>
+                        </a>
+                    </span>
+                  
+                  <span id="toc-menu"><i class="fas fa-list-alt"></i></span>
+                  
+                  <span class="links">
+                 
+                 
+                    
+          
+          
+            
+            
+          
+          
+            
+            
+          
+          
+            
+            
+          
+          
+            <a href='/fcj-workshop-template/'>Internship Report</a> > <a href='/fcj-workshop-template/5-workshop/'>Workshop</a> > <a href='/fcj-workshop-template/5-workshop/5.4-lambda-data/'>Deploy the backend</a> > Prepare the backend
+          
+        
+          
+        
+          
+        
+          
+        
+                 
+                  </span>
+                </div>
+                
+                    <div class="progress">
+  <div class="wrapper"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#before-starting">Before starting</a></li>
+    <li><a href="#1-choose-the-regions-and-names">1. Choose the Regions and names</a></li>
+    <li><a href="#2-create-the-dynamodb-table">2. Create the DynamoDB table</a></li>
+    <li><a href="#3-create-the-private-s3-attachment-bucket">3. Create the private S3 attachment bucket</a>
+      <ul>
+        <li><a href="#configure-s3-cors">Configure S3 CORS</a></li>
+      </ul>
+    </li>
+    <li><a href="#4-create-the-cognito-user-pool">4. Create the Cognito user pool</a></li>
+    <li><a href="#5-make-the-backend-region-aware">5. Make the backend Region-aware</a></li>
+    <li><a href="#6-prepare-the-lambda-execution-policy">6. Prepare the Lambda execution policy</a></li>
+    <li><a href="#7-verify-and-package-the-source">7. Verify and package the source</a></li>
+    <li><a href="#references">References</a></li>
+  </ul>
+</nav></div>
+</div>
+
+                
+              </div>
+            </div>
+            
+        <div id="head-tags">
+        
+        </div>
+        
+        <div id="body-inner">
+          
+            <h1>
+              
+              Prepare the backend
+            </h1>
+          
+
+        
+
+
+
+	<p>This section assumes the project resources do not exist yet. It creates the
+DynamoDB table, private S3 bucket, Cognito user pool, and IAM policy required by
+the backend.</p>
+<p>The instructions use the AWS Management Console. AWS CLI is optional.</p>
+<h2 id="before-starting">Before starting</h2>
+<p>Sign in with an AWS identity that is allowed to create or configure DynamoDB,
+S3, Cognito, IAM roles and policies, Lambda, API Gateway, and CloudWatch Logs.
+An administrator can create the resources on the reader&rsquo;s behalf when a
+student or organization account restricts IAM access.</p>
+<p>Use a development AWS account or environment rather than an unrelated
+production account. Review the selected Region in the console before creating
+each resource.</p>
+<h2 id="1-choose-the-regions-and-names">1. Choose the Regions and names</h2>
+<p>An AWS Region is the location in which AWS creates a resource. The Region
+selector is displayed near the top-right of the AWS console.</p>
+<p>For the simplest first deployment, select one Region and create DynamoDB,
+S3, Cognito, Lambda, and API Gateway there. The backend also supports separate
+Regions, but each service Region must then be recorded correctly.</p>
+<p>Create a private configuration worksheet:</p>
+<table>
+	<thead>
+			<tr>
+					<th>Setting</th>
+					<th>Reader&rsquo;s value</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td>AWS account ID</td>
+					<td><code>YOUR_AWS_ACCOUNT_ID</code></td>
+			</tr>
+			<tr>
+					<td>DynamoDB Region</td>
+					<td><code>YOUR_DYNAMODB_REGION</code></td>
+			</tr>
+			<tr>
+					<td>DynamoDB table name</td>
+					<td><code>YOUR_TABLE_NAME</code></td>
+			</tr>
+			<tr>
+					<td>S3 Region</td>
+					<td><code>YOUR_S3_REGION</code></td>
+			</tr>
+			<tr>
+					<td>S3 bucket name</td>
+					<td><code>YOUR_ATTACHMENTS_BUCKET</code></td>
+			</tr>
+			<tr>
+					<td>Cognito Region</td>
+					<td><code>YOUR_COGNITO_REGION</code></td>
+			</tr>
+			<tr>
+					<td>Cognito user-pool ID</td>
+					<td><code>YOUR_USER_POOL_ID</code></td>
+			</tr>
+			<tr>
+					<td>Cognito app-client ID</td>
+					<td><code>YOUR_APP_CLIENT_ID</code></td>
+			</tr>
+			<tr>
+					<td>Lambda/API Gateway Region</td>
+					<td><code>YOUR_LAMBDA_REGION</code></td>
+			</tr>
+			<tr>
+					<td>Lambda function name</td>
+					<td><code>YOUR_FUNCTION_NAME</code></td>
+			</tr>
+			<tr>
+					<td>Frontend origin</td>
+					<td><code>https://YOUR_FRONTEND_DOMAIN</code></td>
+			</tr>
+	</tbody>
+</table>
+<p>The uppercase values are placeholders. Replace them in AWS configuration, but
+do not replace them with real IDs in documentation committed to a shared
+repository.</p>
+<h2 id="2-create-the-dynamodb-table">2. Create the DynamoDB table</h2>
+<ol>
+<li>Select <code>YOUR_DYNAMODB_REGION</code> in the AWS console.</li>
+<li>Open <strong>DynamoDB → Tables → Create table</strong>.</li>
+<li>Enter any valid table name and record it as <code>YOUR_TABLE_NAME</code>.</li>
+<li>Set <strong>Partition key</strong> to <code>PK</code> with type <strong>String</strong>.</li>
+<li>Set <strong>Sort key</strong> to <code>SK</code> with type <strong>String</strong>.</li>
+<li>Choose <strong>On-demand</strong> capacity mode.</li>
+<li>Leave secondary indexes empty. The current backend does not require one.</li>
+<li>Choose <strong>Create table</strong> and wait until its status is <strong>Active</strong>.</li>
+</ol>
+<p>Do not rename <code>PK</code> or <code>SK</code>. The source code uses those exact, case-sensitive
+attribute names.
+<img src="../../../images/5-Workshop/5.4-Lambda-S3/Screenshot%202026-07-30%20172625.png" alt="Create Table"></p>
+<h2 id="3-create-the-private-s3-attachment-bucket">3. Create the private S3 attachment bucket</h2>
+<ol>
+<li>Select <code>YOUR_S3_REGION</code>.</li>
+<li>Open <strong>Amazon S3 → General purpose buckets → Create bucket</strong>.</li>
+<li>Enter a globally unique bucket name and record it as
+<code>YOUR_ATTACHMENTS_BUCKET</code>.</li>
+<li>Keep <strong>Block all public access</strong> enabled.</li>
+<li>Keep ACLs disabled with <strong>Bucket owner enforced</strong> object ownership.</li>
+<li>Enable default encryption or keep the current S3-managed encryption
+default.</li>
+<li>Create the bucket.</li>
+</ol>
+<p>The bucket is not a public website. Lambda creates temporary signed URLs that
+authorize individual uploads and downloads.
+<img src="../../../images/5-Workshop/5.4-Lambda-S3/Screenshot%202026-07-30%20172744.png" alt="Create Bucket"></p>
+<h3 id="configure-s3-cors">Configure S3 CORS</h3>
+<p>The browser uploads directly to S3, so the bucket must allow the frontend
+origin.</p>
+<p>Open the bucket, then choose <strong>Permissions → Cross-origin resource sharing
+(CORS) → Edit</strong> and enter:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-json" data-lang="json"><span style="display:flex;"><span>[
+</span></span><span style="display:flex;"><span>  {
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&#34;AllowedHeaders&#34;</span>: [
+</span></span><span style="display:flex;"><span>      <span style="color:#e6db74">&#34;Content-Type&#34;</span>
+</span></span><span style="display:flex;"><span>    ],
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&#34;AllowedMethods&#34;</span>: [
+</span></span><span style="display:flex;"><span>      <span style="color:#e6db74">&#34;GET&#34;</span>,
+</span></span><span style="display:flex;"><span>      <span style="color:#e6db74">&#34;PUT&#34;</span>
+</span></span><span style="display:flex;"><span>    ],
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&#34;AllowedOrigins&#34;</span>: [
+</span></span><span style="display:flex;"><span>      <span style="color:#e6db74">&#34;https://YOUR_FRONTEND_DOMAIN&#34;</span>,
+</span></span><span style="display:flex;"><span>      <span style="color:#e6db74">&#34;http://localhost:5173&#34;</span>
+</span></span><span style="display:flex;"><span>    ],
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&#34;ExposeHeaders&#34;</span>: [
+</span></span><span style="display:flex;"><span>      <span style="color:#e6db74">&#34;ETag&#34;</span>
+</span></span><span style="display:flex;"><span>    ],
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&#34;MaxAgeSeconds&#34;</span>: <span style="color:#ae81ff">3600</span>
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>]
+</span></span></code></pre></div><p>Remove the local origin for production if it is not required. CORS does not
+make the bucket public; IAM and the presigned URL still control access.</p>
+<h2 id="4-create-the-cognito-user-pool">4. Create the Cognito user pool</h2>
+<ol>
+<li>Select <code>YOUR_COGNITO_REGION</code>.</li>
+<li>Open <strong>Amazon Cognito → User pools → Create user pool</strong>.</li>
+<li>Choose email as the sign-in identifier.</li>
+<li>Require email verification.</li>
+<li>Select a password policy suitable for the project.</li>
+<li>Enable account recovery by verified email.</li>
+<li>Create or name the user pool and record its ID as <code>YOUR_USER_POOL_ID</code>.</li>
+</ol>
+<p>Create an app client for the React browser application:</p>
+<ol>
+<li>Open the user pool&rsquo;s application or app-client settings.</li>
+<li>Choose a single-page or public client application type.</li>
+<li>Enter a name for the frontend.</li>
+<li>Do <strong>not</strong> create or add a client secret. Browser source code cannot keep a
+secret confidential.</li>
+<li>Enable the authentication flows required by the frontend, including user
+password/SRP authentication and refresh-token authentication where exposed
+by the console.</li>
+<li>Record the app client ID as <code>YOUR_APP_CLIENT_ID</code>.</li>
+</ol>
+<p>The frontend needs the user-pool ID, app-client ID, and Cognito Region. These
+identifiers are configuration values. Never put an app-client secret in
+frontend code.</p>
+<h2 id="5-make-the-backend-region-aware">5. Make the backend Region-aware</h2>
+<p>The backend must not assume that every service uses the Lambda Region. In
+<code>src/common.py</code>, add:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">from</span> botocore.config <span style="color:#f92672">import</span> Config
+</span></span></code></pre></div><p>Configure resource names and Regions from environment variables:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>TABLE_NAME <span style="color:#f92672">=</span> required_environment_variable(<span style="color:#e6db74">&#34;TABLE_NAME&#34;</span>)
+</span></span><span style="display:flex;"><span>ATTACHMENTS_BUCKET <span style="color:#f92672">=</span> required_environment_variable(<span style="color:#e6db74">&#34;ATTACHMENTS_BUCKET&#34;</span>)
+</span></span><span style="display:flex;"><span>USER_POOL_ID <span style="color:#f92672">=</span> required_environment_variable(<span style="color:#e6db74">&#34;USER_POOL_ID&#34;</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>DYNAMODB_REGION <span style="color:#f92672">=</span> required_environment_variable(<span style="color:#e6db74">&#34;DYNAMODB_REGION&#34;</span>)
+</span></span><span style="display:flex;"><span>S3_REGION <span style="color:#f92672">=</span> required_environment_variable(<span style="color:#e6db74">&#34;S3_REGION&#34;</span>)
+</span></span><span style="display:flex;"><span>COGNITO_REGION <span style="color:#f92672">=</span> required_environment_variable(<span style="color:#e6db74">&#34;COGNITO_REGION&#34;</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>dynamodb <span style="color:#f92672">=</span> boto3<span style="color:#f92672">.</span>resource(
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#34;dynamodb&#34;</span>,
+</span></span><span style="display:flex;"><span>    region_name<span style="color:#f92672">=</span>DYNAMODB_REGION,
+</span></span><span style="display:flex;"><span>)
+</span></span><span style="display:flex;"><span>table <span style="color:#f92672">=</span> dynamodb<span style="color:#f92672">.</span>Table(TABLE_NAME)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>s3 <span style="color:#f92672">=</span> boto3<span style="color:#f92672">.</span>client(
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#34;s3&#34;</span>,
+</span></span><span style="display:flex;"><span>    region_name<span style="color:#f92672">=</span>S3_REGION,
+</span></span><span style="display:flex;"><span>    config<span style="color:#f92672">=</span>Config(signature_version<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;s3v4&#34;</span>),
+</span></span><span style="display:flex;"><span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>cognito <span style="color:#f92672">=</span> boto3<span style="color:#f92672">.</span>client(
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#34;cognito-idp&#34;</span>,
+</span></span><span style="display:flex;"><span>    region_name<span style="color:#f92672">=</span>COGNITO_REGION,
+</span></span><span style="display:flex;"><span>)
+</span></span></code></pre></div><p>This works whether all resources share one Region or use separate Regions.
+Do not hardcode the reader&rsquo;s resource names or Regions in <code>common.py</code>.</p>
+<h2 id="6-prepare-the-lambda-execution-policy">6. Prepare the Lambda execution policy</h2>
+<p>Open <code>iam/lambda-execution-policy.json</code>. Replace:</p>
+<ul>
+<li><code>YOUR_AWS_ACCOUNT_ID</code> with the reader&rsquo;s account ID;</li>
+<li><code>YOUR_DYNAMODB_REGION</code> with the table&rsquo;s Region;</li>
+<li><code>YOUR_TABLE_NAME</code> with the table name;</li>
+<li><code>YOUR_ATTACHMENTS_BUCKET</code> with the S3 bucket name;</li>
+<li><code>YOUR_COGNITO_REGION</code> with the user pool&rsquo;s Region;</li>
+<li><code>YOUR_USER_POOL_ID</code> with the user-pool ID.</li>
+</ul>
+<p>If the policy template still uses one <code>YOUR_AWS_REGION</code> placeholder, replace
+the DynamoDB ARN with <code>YOUR_DYNAMODB_REGION</code> and the Cognito ARN with
+<code>YOUR_COGNITO_REGION</code>. S3 ARNs do not contain a Region.</p>
+<p>The custom policy grants:</p>
+<ul>
+<li>the required DynamoDB item, query, and batch-write actions;</li>
+<li>S3 object management only under the bucket&rsquo;s <code>users/*</code> prefix;</li>
+<li>Cognito administrative operations used for active-account checks and account
+deletion.</li>
+</ul>
+<p>The Lambda execution role will also need the AWS-managed
+<code>AWSLambdaBasicExecutionRole</code> policy for CloudWatch Logs.</p>
+<h2 id="7-verify-and-package-the-source">7. Verify and package the source</h2>
+<p>The deployment must contain the latest <code>filters.py</code> with recursive
+<code>expression</code> support.</p>
+<p>Run:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>python -m py_compile src/*.py
+</span></span></code></pre></div><p>Build the ZIP with Python files at the archive root.</p>
+<p>PowerShell:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span>Compress-Archive `
+</span></span><span style="display:flex;"><span>  -Path .\src\*.py `
+</span></span><span style="display:flex;"><span>  -DestinationPath .\todo-backend.zip `
+</span></span><span style="display:flex;"><span>  -Force
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>tar -tf .\todo-backend.zip
+</span></span></code></pre></div><p>macOS or Linux:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>cd src
+</span></span><span style="display:flex;"><span>zip -r ../todo-backend.zip *.py
+</span></span><span style="display:flex;"><span>cd ..
+</span></span><span style="display:flex;"><span>unzip -l todo-backend.zip
+</span></span></code></pre></div><p>The archive must directly contain <code>lambda_function.py</code>, <code>common.py</code>,
+<code>tasks.py</code>, <code>attachments.py</code>, <code>entities.py</code>, <code>filters.py</code>, <code>profile_api.py</code>,
+<code>statistics.py</code>, and <code>transfer.py</code>. The Lambda handler will be:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>lambda_function.lambda_handler
+</span></span></code></pre></div><h2 id="references">References</h2>
+<ul>
+<li><a href="https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/getting-started-step-1.html">Create a DynamoDB table</a></li>
+<li><a href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/create-bucket-overview.html">Create an S3 bucket</a></li>
+<li><a href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/enabling-cors-examples.html">Configure S3 CORS</a></li>
+<li><a href="https://docs.aws.amazon.com/cognito/latest/developerguide/user-pool-settings-client-apps.html">Cognito app-client settings</a></li>
+<li><a href="https://docs.aws.amazon.com/cognito/latest/developerguide/user-pool-security-best-practices.html">Cognito security practices</a></li>
+<li><a href="https://boto3.amazonaws.com/v1/documentation/api/latest/guide/configuration.html">Boto3 Region configuration</a></li>
+</ul>
+
+
+
+
+
+<footer class=" footline" >
+	
+</footer>
+
+        
+        </div> 
+        
+
+      </div>
+
+    <div id="navigation">
+        
+        
+        
+        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+        
+        
+
+
+	 
+	 
+		
+			<a class="nav nav-prev" href="/fcj-workshop-template/5-workshop/5.4-lambda-data/" title="Deploy the backend"> <i class="fa fa-chevron-left"></i></a>
+		
+		
+			<a class="nav nav-next" href="/fcj-workshop-template/5-workshop/5.4-lambda-data/5.4.2-create-lambda-function/" title="Create the Lambda function" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+		
+	
+    </div>
+
+    </section>
+    
+    <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
+      <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
+    </div>
+    <script src="/fcj-workshop-template/js/clipboard.min.js?1785511214"></script>
+    <script src="/fcj-workshop-template/js/perfect-scrollbar.min.js?1785511214"></script>
+    <script src="/fcj-workshop-template/js/perfect-scrollbar.jquery.min.js?1785511214"></script>
+    <script src="/fcj-workshop-template/js/jquery.sticky.js?1785511214"></script>
+    <script src="/fcj-workshop-template/js/featherlight.min.js?1785511214"></script>
+    <script src="/fcj-workshop-template/js/highlight.pack.js?1785511214"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+    <script src="/fcj-workshop-template/js/modernizr.custom-3.6.0.js?1785511214"></script>
+    <script src="/fcj-workshop-template/js/learn.js?1785511214"></script>
+    <script src="/fcj-workshop-template/js/hugo-learn.js?1785511214"></script>
+
+    <link href="/fcj-workshop-template/mermaid/mermaid.css?1785511214" rel="stylesheet" />
+    <script src="/fcj-workshop-template/mermaid/mermaid.js?1785511214"></script>
+    <script>
+        mermaid.initialize({ startOnLoad: true });
+    </script>
+    <script>
+  (function (i, s, o, g, r, a, m) {
+    i["GoogleAnalyticsObject"] = r;
+    ((i[r] =
+      i[r] ||
+      function () {
+        (i[r].q = i[r].q || []).push(arguments);
+      }),
+      (i[r].l = 1 * new Date()));
+    ((a = s.createElement(o)), (m = s.getElementsByTagName(o)[0]));
+    a.async = 1;
+    a.src = g;
+    m.parentNode.insertBefore(a, m);
+  })(
+    window,
+    document,
+    "script",
+    "https://www.google-analytics.com/analytics.js",
+    "ga",
+  );
+
+  ga("create", "UA-158079754-2", "auto");
+  ga("send", "pageview");
+</script>
+
+  </body>
+</html>

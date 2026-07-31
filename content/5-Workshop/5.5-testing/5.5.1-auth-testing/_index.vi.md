@@ -13,7 +13,7 @@ Trong phần này, chúng ta tiến hành kiểm thử toàn bộ luồng Xác t
 1. **Truy cập ứng dụng Web:**
    * Mở trình duyệt web và truy cập vào đường dẫn tên miền **CloudFront HTTPS Distribution** (ví dụ: `https://d3jw5vxof6iq0j.cloudfront.net`).
 
-   ![Giao diện CloudFront App](/images/5-Workshop/5.5-testing/01-cloudfront-app.jpg)
+   ![Giao diện CloudFront App](../../../../images/5-Workshop/5.5-testing/01-cloudfront-app.jpg)
 
 2. **Đăng ký tài khoản mới (Sign Up):**
    * Nhấn vào nút **Sign Up**.
@@ -29,4 +29,4 @@ Trong phần này, chúng ta tiến hành kiểm thử toàn bộ luồng Xác t
      * Hệ thống xác thực thành công và cấp phát chuỗi **Cognito JWT Access Token** bảo mật.
      * Token được tự động lưu trữ an toàn tại **LocalStorage** của trình duyệt để sẵn sàng gắn vào Header `Authorization` cho các REST API request tiếp theo.
 
-   ![Xác thực và Đăng nhập Cognito thành công](/images/5-Workshop/5.5-testing/02-cognito-auth.jpg)
+   ![Xác thực và Đăng nhập Cognito thành công](../../../../images/5-Workshop/5.5-testing/02-cognito-auth.jpg)

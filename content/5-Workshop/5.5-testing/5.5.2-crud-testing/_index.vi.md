@@ -23,7 +23,7 @@ Trong mục này, chúng ta tiến hành kiểm thử các thao tác CRUD (Creat
   * Giao diện phản hồi mượt mà, các thẻ công việc di chuyển đúng cột trạng thái ngay lập tức.
   * Các yêu cầu HTTP `POST /tasks`, `PUT /tasks/{id}`, `DELETE /tasks/{id}` gửi đến API Gateway trả về HTTP Status Code **`200 OK`** hoặc **`201 Created`**.
 
-![Thao tác CRUD trên Web UI](images/5-Workshop/5.5-testing/03-crud-kanban.jpg)
+![Thao tác CRUD trên Web UI](../../../../images/5-Workshop/5.5-testing/03-crud-kanban.jpg)
 
 ---
 
@@ -38,4 +38,4 @@ Trong mục này, chúng ta tiến hành kiểm thử các thao tác CRUD (Creat
   * Bảng DynamoDB lưu trữ đầy đủ các thuộc tính của công việc: `userId` (Partition Key), `taskId` (Sort Key), `title`, `description`, `status`, `category`, `createdAt`, `updatedAt`.
   * Dữ liệu phân quyền chính xác theo đúng chuỗi định danh `userId` của tài khoản Cognito đang đăng nhập.
 
-![Bản ghi trong bảng DynamoDB](images/5-Workshop/5.5-testing/04-dynamodb.jpg)
+![Bản ghi trong bảng DynamoDB](../../../../images/5-Workshop/5.5-testing/04-dynamodb.jpg)

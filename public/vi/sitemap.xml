@@ -15,17 +15,43 @@
                 href="http://localhost:1313/fcj-workshop-template/vi/5-workshop/5.3-s3/5.3.1-create-s3/"
                 />
   </url><url>
-    <loc>http://localhost:1313/fcj-workshop-template/vi/5-workshop/5.4-lambda-s3/5.4.1-prepare/</loc>
-    <lastmod>2026-07-30T00:00:00+00:00</lastmod>
+    <loc>http://localhost:1313/fcj-workshop-template/vi/5-workshop/5.1-overview/</loc>
+    <lastmod>2026-07-31T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://localhost:1313/fcj-workshop-template/5-workshop/5.4-lambda-s3/5.4.1-prepare/"
+                href="http://localhost:1313/fcj-workshop-template/5-workshop/5.1-overview/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="vi"
-                href="http://localhost:1313/fcj-workshop-template/vi/5-workshop/5.4-lambda-s3/5.4.1-prepare/"
+                href="http://localhost:1313/fcj-workshop-template/vi/5-workshop/5.1-overview/"
+                />
+  </url><url>
+    <loc>http://localhost:1313/fcj-workshop-template/vi/5-workshop/5.4-lambda-data/5.4.1-prepare/</loc>
+    <lastmod>2026-07-30T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="http://localhost:1313/fcj-workshop-template/5-workshop/5.4-lambda-data/5.4.1-prepare/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="vi"
+                href="http://localhost:1313/fcj-workshop-template/vi/5-workshop/5.4-lambda-data/5.4.1-prepare/"
+                />
+  </url><url>
+    <loc>http://localhost:1313/fcj-workshop-template/vi/4-eventparticipated/4.2-event3/</loc>
+    <lastmod>2026-07-25T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="http://localhost:1313/fcj-workshop-template/4-eventparticipated/4.2-event3/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="vi"
+                href="http://localhost:1313/fcj-workshop-template/vi/4-eventparticipated/4.2-event3/"
                 />
   </url><url>
     <loc>http://localhost:1313/fcj-workshop-template/vi/3-blogsposted/3.1-blog1/</loc>
@@ -39,6 +65,19 @@
                 rel="alternate"
                 hreflang="vi"
                 href="http://localhost:1313/fcj-workshop-template/vi/3-blogsposted/3.1-blog1/"
+                />
+  </url><url>
+    <loc>http://localhost:1313/fcj-workshop-template/vi/4-eventparticipated/4.2-event2/</loc>
+    <lastmod>2026-06-13T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="http://localhost:1313/fcj-workshop-template/4-eventparticipated/4.2-event2/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="vi"
+                href="http://localhost:1313/fcj-workshop-template/vi/4-eventparticipated/4.2-event2/"
                 />
   </url><url>
     <loc>http://localhost:1313/fcj-workshop-template/vi/5-workshop/5.5-testing/5.5.1-auth-testing/</loc>
@@ -106,32 +145,6 @@
                 href="http://localhost:1313/fcj-workshop-template/vi/"
                 />
   </url><url>
-    <loc>http://localhost:1313/fcj-workshop-template/vi/4-eventparticipated/4.2-event2/</loc>
-    <lastmod>2024-01-01T00:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="http://localhost:1313/fcj-workshop-template/4-eventparticipated/4.2-event2/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="vi"
-                href="http://localhost:1313/fcj-workshop-template/vi/4-eventparticipated/4.2-event2/"
-                />
-  </url><url>
-    <loc>http://localhost:1313/fcj-workshop-template/vi/5-workshop/5.1-workshop-overview/</loc>
-    <lastmod>2024-01-01T00:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="http://localhost:1313/fcj-workshop-template/5-workshop/5.1-workshop-overview/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="vi"
-                href="http://localhost:1313/fcj-workshop-template/vi/5-workshop/5.1-workshop-overview/"
-                />
-  </url><url>
     <loc>http://localhost:1313/fcj-workshop-template/vi/1-worklog/1.4-week4/</loc>
     <lastmod>2024-01-01T00:00:00+00:00</lastmod>
     <xhtml:link
@@ -171,17 +184,17 @@
                 href="http://localhost:1313/fcj-workshop-template/vi/5-workshop/5.3-s3/5.3.2-config-cloudfront/"
                 />
   </url><url>
-    <loc>http://localhost:1313/fcj-workshop-template/vi/5-workshop/5.4-lambda-s3/5.4.2-create-lambda-function/</loc>
+    <loc>http://localhost:1313/fcj-workshop-template/vi/5-workshop/5.4-lambda-data/5.4.2-create-lambda-function/</loc>
     <lastmod>2026-07-30T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://localhost:1313/fcj-workshop-template/5-workshop/5.4-lambda-s3/5.4.2-create-lambda-function/"
+                href="http://localhost:1313/fcj-workshop-template/5-workshop/5.4-lambda-data/5.4.2-create-lambda-function/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="vi"
-                href="http://localhost:1313/fcj-workshop-template/vi/5-workshop/5.4-lambda-s3/5.4.2-create-lambda-function/"
+                href="http://localhost:1313/fcj-workshop-template/vi/5-workshop/5.4-lambda-data/5.4.2-create-lambda-function/"
                 />
   </url><url>
     <loc>http://localhost:1313/fcj-workshop-template/vi/3-blogsposted/3.2-blog2/</loc>
@@ -236,19 +249,6 @@
                 href="http://localhost:1313/fcj-workshop-template/vi/2-proposal/"
                 />
   </url><url>
-    <loc>http://localhost:1313/fcj-workshop-template/vi/4-eventparticipated/4.2-event3/</loc>
-    <lastmod>2024-01-01T00:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="http://localhost:1313/fcj-workshop-template/4-eventparticipated/4.2-event3/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="vi"
-                href="http://localhost:1313/fcj-workshop-template/vi/4-eventparticipated/4.2-event3/"
-                />
-  </url><url>
     <loc>http://localhost:1313/fcj-workshop-template/vi/5-workshop/5.3-s3/5.3.3-update-s3-policy/</loc>
     <lastmod>2026-07-31T00:00:00+00:00</lastmod>
     <xhtml:link
@@ -262,17 +262,17 @@
                 href="http://localhost:1313/fcj-workshop-template/vi/5-workshop/5.3-s3/5.3.3-update-s3-policy/"
                 />
   </url><url>
-    <loc>http://localhost:1313/fcj-workshop-template/vi/5-workshop/5.4-lambda-s3/5.4.3-configure-api-gateway/</loc>
+    <loc>http://localhost:1313/fcj-workshop-template/vi/5-workshop/5.4-lambda-data/5.4.3-configure-api-gateway/</loc>
     <lastmod>2026-07-30T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://localhost:1313/fcj-workshop-template/5-workshop/5.4-lambda-s3/5.4.3-configure-api-gateway/"
+                href="http://localhost:1313/fcj-workshop-template/5-workshop/5.4-lambda-data/5.4.3-configure-api-gateway/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="vi"
-                href="http://localhost:1313/fcj-workshop-template/vi/5-workshop/5.4-lambda-s3/5.4.3-configure-api-gateway/"
+                href="http://localhost:1313/fcj-workshop-template/vi/5-workshop/5.4-lambda-data/5.4.3-configure-api-gateway/"
                 />
   </url><url>
     <loc>http://localhost:1313/fcj-workshop-template/vi/3-blogsposted/</loc>
@@ -353,17 +353,17 @@
                 href="http://localhost:1313/fcj-workshop-template/vi/5-workshop/5.3-s3/5.3.4-build-upload-frontend/"
                 />
   </url><url>
-    <loc>http://localhost:1313/fcj-workshop-template/vi/5-workshop/5.4-lambda-s3/</loc>
+    <loc>http://localhost:1313/fcj-workshop-template/vi/5-workshop/5.4-lambda-data/</loc>
     <lastmod>2026-07-30T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://localhost:1313/fcj-workshop-template/5-workshop/5.4-lambda-s3/"
+                href="http://localhost:1313/fcj-workshop-template/5-workshop/5.4-lambda-data/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="vi"
-                href="http://localhost:1313/fcj-workshop-template/vi/5-workshop/5.4-lambda-s3/"
+                href="http://localhost:1313/fcj-workshop-template/vi/5-workshop/5.4-lambda-data/"
                 />
   </url><url>
     <loc>http://localhost:1313/fcj-workshop-template/vi/5-workshop/5.5-testing/5.5.4-security-testing/</loc>
@@ -405,6 +405,19 @@
                 href="http://localhost:1313/fcj-workshop-template/vi/5-workshop/5.5-testing/"
                 />
   </url><url>
+    <loc>http://localhost:1313/fcj-workshop-template/vi/5-workshop/</loc>
+    <lastmod>2026-07-31T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="http://localhost:1313/fcj-workshop-template/5-workshop/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="vi"
+                href="http://localhost:1313/fcj-workshop-template/vi/5-workshop/"
+                />
+  </url><url>
     <loc>http://localhost:1313/fcj-workshop-template/vi/1-worklog/1.5-week5/</loc>
     <lastmod>2026-06-29T00:00:00+00:00</lastmod>
     <xhtml:link
@@ -429,19 +442,6 @@
                 rel="alternate"
                 hreflang="vi"
                 href="http://localhost:1313/fcj-workshop-template/vi/5-workshop/5.5-testing/5.5.5-monitoring-testing/"
-                />
-  </url><url>
-    <loc>http://localhost:1313/fcj-workshop-template/vi/5-workshop/</loc>
-    <lastmod>2024-01-01T00:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="http://localhost:1313/fcj-workshop-template/5-workshop/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="vi"
-                href="http://localhost:1313/fcj-workshop-template/vi/5-workshop/"
                 />
   </url><url>
     <loc>http://localhost:1313/fcj-workshop-template/vi/1-worklog/1.6-week6/</loc>

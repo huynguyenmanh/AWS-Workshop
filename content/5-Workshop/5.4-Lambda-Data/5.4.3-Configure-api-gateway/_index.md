@@ -6,8 +6,6 @@ chapter: false
 pre: "<b> 5.4.3 </b>"
 ---
 
-# Configure API Gateway
-
 Use an Amazon API Gateway **HTTP API**, because the Lambda router expects the
 HTTP API v2 event structure:
 

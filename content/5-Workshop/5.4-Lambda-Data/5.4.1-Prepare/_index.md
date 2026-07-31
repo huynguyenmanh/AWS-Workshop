@@ -6,8 +6,6 @@ chapter: false
 pre: "<b> 5.4.1 </b>"
 ---
 
-# Prepare the backend from a new AWS account
-
 This section assumes the project resources do not exist yet. It creates the
 DynamoDB table, private S3 bucket, Cognito user pool, and IAM policy required by
 the backend.

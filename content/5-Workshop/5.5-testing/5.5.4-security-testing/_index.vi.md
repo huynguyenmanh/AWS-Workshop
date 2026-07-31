@@ -20,7 +20,7 @@ Trong phần này, chúng ta tiến hành kiểm thử tính an toàn của hệ
   * API Gateway lập tức từ chối request ở tầng Gateway mà không kích hoạt hàm Lambda backend.
   * Trả về HTTP Status Code **`401 Unauthorized`**.
 
-![Kiểm thử 401 Unauthorized trên Postman](/images/5-Workshop/5.5-testing/06-api-unauthorized.jpg)
+![Kiểm thử 401 Unauthorized trên Postman](../../../../images/5-Workshop/5.5-testing/06-api-unauthorized.jpg)
 
 ---
 
@@ -32,4 +32,4 @@ Trong phần này, chúng ta tiến hành kiểm thử tính an toàn của hệ
 * **Kết quả kỳ vọng:**
   * API Gateway trả về HTTP Status **`200 OK`** cùng dãy Response Headers chứa cấu hình CORS hợp lệ: `Access-Control-Allow-Origin`, `Access-Control-Allow-Headers`, `Access-Control-Allow-Methods`.
 
-![Xác minh Response Headers CORS](/images/5-Workshop/5.5-testing/07-cors-headers.jpg)
+![Xác minh Response Headers CORS](../../../../images/5-Workshop/5.5-testing/07-cors-headers.jpg)

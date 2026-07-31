@@ -66,7 +66,7 @@ Các giá trị viết hoa là placeholder. Thay chúng trong cấu hình AWS, n
 
 Không đổi tên `PK` hoặc `SK`. Source code dùng chính xác hai tên này và có phân
 biệt chữ hoa, chữ thường.
-![Create Table](<../../../images/5-Workshop/5.4-Lambda-S3/Screenshot 2026-07-30 172625.png>)
+![Create Table](<../../../../images/5-Workshop/5.4-Lambda-S3/Screenshot 2026-07-30 172625.png>)
 ## 3. Tạo S3 attachment bucket riêng tư
 
 1. Chọn `YOUR_S3_REGION`.
@@ -80,7 +80,7 @@ biệt chữ hoa, chữ thường.
 
 Bucket này không phải public website. Lambda tạo temporary signed URL để cho
 phép tải lên hoặc tải xuống từng tệp cụ thể.
-![Create Bucket](<../../../images/5-Workshop/5.4-Lambda-S3/Screenshot 2026-07-30 172744.png>)
+![Create Bucket](<../../../../images/5-Workshop/5.4-Lambda-S3/Screenshot 2026-07-30 172744.png>)
 ### Cấu hình S3 CORS
 
 Trình duyệt tải tệp trực tiếp lên S3, do đó bucket phải cho phép frontend

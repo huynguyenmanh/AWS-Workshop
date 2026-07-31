@@ -19,7 +19,7 @@ Trong phần này, chúng ta tiến hành kiểm thử khả năng vận hành v
 * **Kết quả kỳ vọng:**
   * CloudWatch ghi nhận đầy đủ luồng thực thi: `START RequestId`, `REPORT Duration`, `Billed Duration`, `Memory Size`.
 
-![Kiểm tra Log Stream trên CloudWatch Logs](/images/5-Workshop/5.5-testing/08-cloudwatch-logs.jpg)
+![Kiểm tra Log Stream trên CloudWatch Logs](../../../../images/5-Workshop/5.5-testing/08-cloudwatch-logs.jpg)
 
 ---
 
@@ -32,7 +32,7 @@ Trong phần này, chúng ta tiến hành kiểm thử khả năng vận hành v
 * **Kết quả kỳ vọng:**
   * Biểu đồ hiển thị trực quan lưu lượng truy cập hệ thống với tỷ lệ thành công 100%.
 
-![Quan sát Metrics của Lambda](../../../images/5-Workshop/5.5-testing/09-cloudwatch-metrics.jpg)
+![Quan sát Metrics của Lambda](../../../../images/5-Workshop/5.5-testing/09-cloudwatch-metrics.jpg)
 
 ---
 
@@ -45,4 +45,4 @@ Trong phần này, chúng ta tiến hành kiểm thử khả năng vận hành v
 * **Kết quả kỳ vọng:**
   * Alarm duy trì ở trạng thái **`OK`**.
 
-![Xác minh trạng thái CloudWatch Billing Alarm](../../../images/5-Workshop/5.5-testing/10-billing-alarm.jpg)
+![Xác minh trạng thái CloudWatch Billing Alarm](../../../../images/5-Workshop/5.5-testing/10-billing-alarm.jpg)

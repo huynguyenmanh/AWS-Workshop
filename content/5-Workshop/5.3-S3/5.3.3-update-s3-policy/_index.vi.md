@@ -16,12 +16,12 @@ Mặc dù CloudFront đã được cấu hình OAC để có thể truy cập S3
 3. Chuyển sang tab **Permissions** (Quyền).
 4. Cuộn xuống phần **Bucket policy** và nhấp vào nút **Edit** (Chỉnh sửa).
 
-![Edit S3 Bucket Policy](../../../images/5-Workshop/5.3-S3/s3-policy-edit.png)
+![Edit S3 Bucket Policy](../../../../images/5-Workshop/5.3-S3/s3-policy-edit.png)
 
 5. Trong khung soạn thảo **Policy**, hãy xóa bất kỳ nội dung cũ nào (nếu có) và **Dán (Paste)** đoạn mã JSON mà bạn đã copy từ CloudFront ở bước 5.3.2 vào đây.
 
 6. Cuộn xuống cuối trang và nhấp vào nút **Save changes** (Lưu thay đổi).
 
-![Paste Policy and Save](../../../images/5-Workshop/5.3-S3/s3-policy-save.png)
+![Paste Policy and Save](../../../../images/5-Workshop/5.3-S3/s3-policy-save.png)
 
 Sau khi lưu thành công, bạn sẽ thấy thông báo màu xanh lá cây xác nhận policy đã được cập nhật. Lúc này, luồng phân phối CDN từ CloudFront qua S3 đã hoàn toàn thông suốt và bảo mật.

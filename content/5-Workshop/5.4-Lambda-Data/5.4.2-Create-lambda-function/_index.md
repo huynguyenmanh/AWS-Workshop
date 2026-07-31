@@ -6,8 +6,6 @@ chapter: false
 pre: "<b> 5.4.2 </b>"
 ---
 
-# Create the Lambda function
-
 This project uses one Lambda router for all backend routes.
 
 ## 1. Create the execution role

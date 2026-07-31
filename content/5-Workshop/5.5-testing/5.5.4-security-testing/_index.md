@@ -20,7 +20,7 @@ In this section, we validate the security controls at the **Amazon API Gateway**
   * API Gateway intercepts and rejects the request at the entry layer.
   * Responds with HTTP Status **`401 Unauthorized`**.
 
-![401 Unauthorized Test Result](/images/5-Workshop/5.5-testing/06-api-unauthorized.jpg)
+![401 Unauthorized Test Result](../../../images/5-Workshop/5.5-testing/06-api-unauthorized.jpg)
 
 ---
 
@@ -32,4 +32,4 @@ In this section, we validate the security controls at the **Amazon API Gateway**
 * **Expected Results:**
   * API Gateway responds with HTTP Status **`200 OK`** and valid CORS headers: `Access-Control-Allow-Origin`, `Access-Control-Allow-Headers`, `Access-Control-Allow-Methods`.
 
-![CORS Response Headers Verification](/images/5-Workshop/5.5-testing/07-cors-headers.jpg)
+![CORS Response Headers Verification](../../../images/5-Workshop/5.5-testing/07-cors-headers.jpg)

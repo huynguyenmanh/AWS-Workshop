@@ -34,4 +34,4 @@ In this section, we validate the attachment upload feature using **S3 Presigned 
   * The image file is successfully persisted inside the target S3 folder path with accurate file sizes and metadata.
   * Direct public access without valid presigned signatures remains blocked by bucket security policies.
 
-![S3 Attachment Upload Verification](/images/5-Workshop/5.5-testing/05-s3-upload.jpg)
+![S3 Attachment Upload Verification](../../../images/5-Workshop/5.5-testing/05-s3-upload.jpg)

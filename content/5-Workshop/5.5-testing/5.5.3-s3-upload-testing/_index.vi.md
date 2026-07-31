@@ -34,4 +34,4 @@ Trong mục này, chúng ta tiến hành kiểm thử tính năng tải tệp/h�
   * File ảnh đính kèm hiển thị đầy đủ trong S3 Bucket với kích thước và thuộc tính chuẩn xác.
   * Tệp ảnh được phân quyền truy cập an toàn, chặn truy cập công khai ngoài Presigned URL.
 
-![Xác minh lưu trữ tệp trên Amazon S3](/images/5-Workshop/5.5-testing/05-s3-upload.jpg)
+![Xác minh lưu trữ tệp trên Amazon S3](../../../../images/5-Workshop/5.5-testing/05-s3-upload.jpg)

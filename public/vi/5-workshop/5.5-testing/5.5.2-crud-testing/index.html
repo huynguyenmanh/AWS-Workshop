@@ -12,24 +12,24 @@
 
     <link rel="icon" href="/fcj-workshop-template/images/favicon.png" type="image/png">
 
-    <title>Kiểm thử Chức năng Quản lý Task &amp; Note (CRUD Operations) :: Báo cáo thực tập</title>
+    <title>Kiểm thử Chức năng Quản lý Task &amp; Note (CRUD &amp; DynamoDB) :: Báo cáo thực tập</title>
 
     
-    <link href="/fcj-workshop-template/css/nucleus.css?1785491842" rel="stylesheet">
-    <link href="/fcj-workshop-template/css/fontawesome-all.min.css?1785491842" rel="stylesheet">
-    <link href="/fcj-workshop-template/css/hybrid.css?1785491842" rel="stylesheet">
-    <link href="/fcj-workshop-template/css/featherlight.min.css?1785491842" rel="stylesheet">
-    <link href="/fcj-workshop-template/css/perfect-scrollbar.min.css?1785491842" rel="stylesheet">
-    <link href="/fcj-workshop-template/css/auto-complete.css?1785491842" rel="stylesheet">
-    <link href="/fcj-workshop-template/css/atom-one-dark-reasonable.css?1785491842" rel="stylesheet">
-    <link href="/fcj-workshop-template/css/theme.css?1785491842" rel="stylesheet">
-    <link href="/fcj-workshop-template/css/hugo-theme.css?1785491842" rel="stylesheet">
+    <link href="/fcj-workshop-template/css/nucleus.css?1785511521" rel="stylesheet">
+    <link href="/fcj-workshop-template/css/fontawesome-all.min.css?1785511521" rel="stylesheet">
+    <link href="/fcj-workshop-template/css/hybrid.css?1785511521" rel="stylesheet">
+    <link href="/fcj-workshop-template/css/featherlight.min.css?1785511521" rel="stylesheet">
+    <link href="/fcj-workshop-template/css/perfect-scrollbar.min.css?1785511521" rel="stylesheet">
+    <link href="/fcj-workshop-template/css/auto-complete.css?1785511521" rel="stylesheet">
+    <link href="/fcj-workshop-template/css/atom-one-dark-reasonable.css?1785511521" rel="stylesheet">
+    <link href="/fcj-workshop-template/css/theme.css?1785511521" rel="stylesheet">
+    <link href="/fcj-workshop-template/css/hugo-theme.css?1785511521" rel="stylesheet">
     
-    <link href="/fcj-workshop-template/css/theme-workshop.css?1785491842" rel="stylesheet">
+    <link href="/fcj-workshop-template/css/theme-workshop.css?1785511521" rel="stylesheet">
     
     
 
-    <script src="/fcj-workshop-template/js/jquery-3.3.1.min.js?1785491842"></script>
+    <script src="/fcj-workshop-template/js/jquery-3.3.1.min.js?1785511521"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -59,14 +59,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/fcj-workshop-template/js/lunr.min.js?1785491842"></script>
-<script type="text/javascript" src="/fcj-workshop-template/js/auto-complete.js?1785491842"></script>
+<script type="text/javascript" src="/fcj-workshop-template/js/lunr.min.js?1785511521"></script>
+<script type="text/javascript" src="/fcj-workshop-template/js/auto-complete.js?1785511521"></script>
 <script type="text/javascript">
     
         var baseurl = "http:\/\/localhost:1313\/fcj-workshop-template\/\/vi";
     
 </script>
-<script type="text/javascript" src="/fcj-workshop-template/js/search.js?1785491842"></script>
+<script type="text/javascript" src="/fcj-workshop-template/js/search.js?1785511521"></script>
  
   </div>
 
@@ -367,16 +367,16 @@
           
             
 <li
-  data-nav-id="/fcj-workshop-template/vi/4-eventparticipated/4.1-event1/"
-  title="Event 1"
+  data-nav-id="/fcj-workshop-template/vi/4-eventparticipated/4.2-event3/"
+  title="Event 3"
   class="dd-item 
         
         
         
         "
 >
-  <a href="/fcj-workshop-template/vi/4-eventparticipated/4.1-event1/">
-     <b> 4.1. </b> Event 1 
+  <a href="/fcj-workshop-template/vi/4-eventparticipated/4.2-event3/">
+     <b> 4.3. </b> Event 3 
     <i class="fas fa-check read-icon"></i>
     
   </a>
@@ -403,16 +403,16 @@
     
             
 <li
-  data-nav-id="/fcj-workshop-template/vi/4-eventparticipated/4.2-event3/"
-  title="Event 3"
+  data-nav-id="/fcj-workshop-template/vi/4-eventparticipated/4.1-event1/"
+  title="Event 1"
   class="dd-item 
         
         
         
         "
 >
-  <a href="/fcj-workshop-template/vi/4-eventparticipated/4.2-event3/">
-     <b> 4.3. </b> Event 3 
+  <a href="/fcj-workshop-template/vi/4-eventparticipated/4.1-event1/">
+     <b> 4.1. </b> Event 1 
     <i class="fas fa-check read-icon"></i>
     
   </a>
@@ -442,16 +442,16 @@
           
             
 <li
-  data-nav-id="/fcj-workshop-template/vi/5-workshop/5.1-workshop-overview/"
-  title="Giới thiệu"
+  data-nav-id="/fcj-workshop-template/vi/5-workshop/5.1-overview/"
+  title="Tổng quan dự án"
   class="dd-item 
         
         
         
         "
 >
-  <a href="/fcj-workshop-template/vi/5-workshop/5.1-workshop-overview/">
-     <b> 5.1. </b> Giới thiệu 
+  <a href="/fcj-workshop-template/vi/5-workshop/5.1-overview/">
+     <b> 5.1. </b> Tổng quan dự án 
     <i class="fas fa-check read-icon"></i>
     
   </a>
@@ -572,16 +572,16 @@
     
             
 <li
-  data-nav-id="/fcj-workshop-template/vi/5-workshop/5.4-lambda-s3/"
-  title="5.4 Triển khai backend"
+  data-nav-id="/fcj-workshop-template/vi/5-workshop/5.4-lambda-data/"
+  title="Triển khai backend"
   class="dd-item 
         
         
         
         "
 >
-  <a href="/fcj-workshop-template/vi/5-workshop/5.4-lambda-s3/">
-    <b>5.4 </b>5.4 Triển khai backend 
+  <a href="/fcj-workshop-template/vi/5-workshop/5.4-lambda-data/">
+    <b> 5.4 </b>Triển khai backend 
     <i class="fas fa-check read-icon"></i>
     
   </a>
@@ -590,16 +590,16 @@
           
             
 <li
-  data-nav-id="/fcj-workshop-template/vi/5-workshop/5.4-lambda-s3/5.4.1-prepare/"
-  title="5.4.1 Chuẩn bị backend"
+  data-nav-id="/fcj-workshop-template/vi/5-workshop/5.4-lambda-data/5.4.1-prepare/"
+  title="Chuẩn bị backend"
   class="dd-item 
         
         
         
         "
 >
-  <a href="/fcj-workshop-template/vi/5-workshop/5.4-lambda-s3/5.4.1-prepare/">
-    <b>5.4.1 </b>5.4.1 Chuẩn bị backend 
+  <a href="/fcj-workshop-template/vi/5-workshop/5.4-lambda-data/5.4.1-prepare/">
+    <b> 5.4.1 </b>Chuẩn bị backend 
     <i class="fas fa-check read-icon"></i>
     
   </a>
@@ -608,16 +608,16 @@
     
             
 <li
-  data-nav-id="/fcj-workshop-template/vi/5-workshop/5.4-lambda-s3/5.4.2-create-lambda-function/"
-  title="5.4.2 Tạo Lambda function"
+  data-nav-id="/fcj-workshop-template/vi/5-workshop/5.4-lambda-data/5.4.2-create-lambda-function/"
+  title="Tạo Lambda function"
   class="dd-item 
         
         
         
         "
 >
-  <a href="/fcj-workshop-template/vi/5-workshop/5.4-lambda-s3/5.4.2-create-lambda-function/">
-    <b>5.4.2 </b>5.4.2 Tạo Lambda function 
+  <a href="/fcj-workshop-template/vi/5-workshop/5.4-lambda-data/5.4.2-create-lambda-function/">
+    <b> 5.4.2 </b>Tạo Lambda function 
     <i class="fas fa-check read-icon"></i>
     
   </a>
@@ -626,16 +626,16 @@
     
             
 <li
-  data-nav-id="/fcj-workshop-template/vi/5-workshop/5.4-lambda-s3/5.4.3-configure-api-gateway/"
-  title="5.4.3 Cấu hình API Gateway"
+  data-nav-id="/fcj-workshop-template/vi/5-workshop/5.4-lambda-data/5.4.3-configure-api-gateway/"
+  title="Cấu hình API Gateway"
   class="dd-item 
         
         
         
         "
 >
-  <a href="/fcj-workshop-template/vi/5-workshop/5.4-lambda-s3/5.4.3-configure-api-gateway/">
-    <b>5.4.3 </b>5.4.3 Cấu hình API Gateway 
+  <a href="/fcj-workshop-template/vi/5-workshop/5.4-lambda-data/5.4.3-configure-api-gateway/">
+    <b> 5.4.3 </b>Cấu hình API Gateway 
     <i class="fas fa-check read-icon"></i>
     
   </a>
@@ -675,7 +675,7 @@
         "
 >
   <a href="/fcj-workshop-template/vi/5-workshop/5.5-testing/5.5.1-auth-testing/">
-     <b> 5.4.1. </b> Kiểm thử Xác thực người dùng (Amazon Cognito) 
+     <b> 5.5.1. </b> Kiểm thử Xác thực người dùng (Amazon Cognito) 
     <i class="fas fa-check read-icon"></i>
     
   </a>
@@ -685,7 +685,7 @@
             
 <li
   data-nav-id="/fcj-workshop-template/vi/5-workshop/5.5-testing/5.5.2-crud-testing/"
-  title="Kiểm thử Chức năng Quản lý Task &amp; Note (CRUD Operations)"
+  title="Kiểm thử Chức năng Quản lý Task &amp; Note (CRUD &amp; DynamoDB)"
   class="dd-item 
         
         active
@@ -693,7 +693,7 @@
         "
 >
   <a href="/fcj-workshop-template/vi/5-workshop/5.5-testing/5.5.2-crud-testing/">
-     <b> 5.4.2. </b> Kiểm thử Chức năng Quản lý Task &amp; Note (CRUD Operations) 
+     <b> 5.5.2. </b> Kiểm thử Chức năng Quản lý Task &amp; Note (CRUD &amp; DynamoDB) 
     <i class="fas fa-check read-icon"></i>
     
   </a>
@@ -711,7 +711,7 @@
         "
 >
   <a href="/fcj-workshop-template/vi/5-workshop/5.5-testing/5.5.3-s3-upload-testing/">
-     <b> 5.4.3. </b> Kiểm thử Tải file đính kèm với S3 Presigned URL 
+     <b> 5.5.3. </b> Kiểm thử Tải file đính kèm với S3 Presigned URL 
     <i class="fas fa-check read-icon"></i>
     
   </a>
@@ -721,7 +721,7 @@
             
 <li
   data-nav-id="/fcj-workshop-template/vi/5-workshop/5.5-testing/5.5.4-security-testing/"
-  title="Kiểm thử Bảo mật API Gateway JWT Authorizer &amp; CORS"
+  title="Kiểm thử Bảo mật API Gateway &amp; CORS"
   class="dd-item 
         
         
@@ -729,7 +729,7 @@
         "
 >
   <a href="/fcj-workshop-template/vi/5-workshop/5.5-testing/5.5.4-security-testing/">
-     <b> 5.4.4. </b> Kiểm thử Bảo mật API Gateway JWT Authorizer &amp; CORS 
+     <b> 5.5.4. </b> Kiểm thử Bảo mật API Gateway &amp; CORS 
     <i class="fas fa-check read-icon"></i>
     
   </a>
@@ -747,7 +747,7 @@
         "
 >
   <a href="/fcj-workshop-template/vi/5-workshop/5.5-testing/5.5.5-monitoring-testing/">
-     <b> 5.4.5. </b> Kiểm thử Giám sát &amp; Ghi log trên Amazon CloudWatch 
+     <b> 5.5.5. </b> Kiểm thử Giám sát &amp; Ghi log trên Amazon CloudWatch 
     <i class="fas fa-check read-icon"></i>
     
   </a>
@@ -955,7 +955,7 @@
             
           
           
-            <a href='/fcj-workshop-template/vi/'>Báo cáo thực tập</a> > <a href='/fcj-workshop-template/vi/5-workshop/'>Workshop</a> > <a href='/fcj-workshop-template/vi/5-workshop/5.5-testing/'>Kiểm thử hệ thống</a> > Kiểm thử Chức năng Quản lý Task & Note (CRUD Operations)
+            <a href='/fcj-workshop-template/vi/'>Báo cáo thực tập</a> > <a href='/fcj-workshop-template/vi/5-workshop/'>Workshop</a> > <a href='/fcj-workshop-template/vi/5-workshop/5.5-testing/'>Kiểm thử hệ thống</a> > Kiểm thử Chức năng Quản lý Task & Note (CRUD & DynamoDB)
           
         
           
@@ -992,7 +992,7 @@
           
             <h1>
               
-              Kiểm thử Chức năng Quản lý Task &amp; Note (CRUD Operations)
+              Kiểm thử Chức năng Quản lý Task &amp; Note (CRUD &amp; DynamoDB)
             </h1>
           
 
@@ -1000,96 +1000,49 @@
 
 
 
-	
-<div
-  class="notices warning"
-  
->
-  <p>⚠️ <strong>Lưu ý:</strong> Các thông tin dưới đây chỉ nhằm mục đích tham khảo, vui lòng <strong>không sao chép nguyên văn</strong> cho bài báo cáo của bạn kể cả cảnh báo này.</p>
-
-</div>
-
-<p>Trong mục này, chúng ta tiến hành kiểm thử các thao tác CRUD (Create, Read, Update, Delete) cho công việc và ghi chú, bao gồm cả tính năng đính kèm hình ảnh thông qua S3 Presigned URL và đồng bộ trạng thái trên giao diện Kanban.</p>
+	<p>Trong mục này, chúng ta tiến hành kiểm thử các thao tác CRUD (Create, Read, Update, Delete) cho công việc và ghi chú trực tiếp trên giao diện Web UI, đồng thời xác minh trạng thái đồng bộ dữ liệu tại cơ sở dữ liệu Amazon DynamoDB.</p>
 <hr>
-<h4 id="1-kiểm-thử-tạo-mới-task--đính-kèm-ảnh-create--attach-image">1. Kiểm thử Tạo mới Task &amp; Đính kèm Ảnh (Create &amp; Attach Image)</h4>
+<h4 id="1-kiểm-thử-thao-tác-crud-trên-giao-diện-web-ui-kanban-board">1. Kiểm thử Thao tác CRUD trên Giao diện Web UI (Kanban Board)</h4>
 <ul>
 <li>
 <p><strong>Các bước thực hiện:</strong></p>
 <ol>
-<li>Nhấn nút <strong>Create New Task</strong> trên giao diện Web.</li>
-<li>Điền Tiêu đề (Title), Mô tả (Description), chọn Danh mục (Category), Gán thẻ (Tags) và ngày hết hạn (Due Date).</li>
-<li>Tải lên một tệp hình ảnh đính kèm (<code>.png</code> / <code>.jpg</code>). Frontend sẽ gọi API lấy S3 Presigned URL và upload ảnh trực tiếp lên <strong>S3 Attachments Bucket</strong>.</li>
-<li>Nhấn <strong>Save Task</strong>.</li>
+<li>Nhấn nút <strong>Create New Task</strong> trên giao diện Web để khởi tạo công việc/ghi chú mới.</li>
+<li>Nhập Tiêu đề, Nội dung mô tả, chọn Danh mục, Gán thẻ và chọn Ngày hết hạn.</li>
+<li>Bấm <strong>Save Task</strong> để lưu dữ liệu.</li>
+<li>Thực hiện chuyển đổi trạng thái bằng cách kéo thả (Drag-and-Drop) thẻ công việc từ cột <em>In Progress</em> sang <em>Completed</em> trên bảng <strong>Kanban Board</strong>.</li>
+<li>Thử nghiệm chỉnh sửa nội dung và nhấn <strong>Delete</strong> để xóa thử nghiệm một ghi chú.</li>
 </ol>
 </li>
 <li>
 <p><strong>Kết quả kỳ vọng:</strong></p>
 <ul>
-<li>Request <code>POST /tasks</code> gửi thành công, trả về HTTP <strong><code>201 Created</code></strong>.</li>
-<li>Bảng <strong>Amazon DynamoDB (<code>TodoNotesTable</code>)</strong> xuất hiện bản ghi mới chứa thông tin <code>userId</code> (Primary Key) và <code>taskId</code> (Sort Key).</li>
-<li>Ảnh đính kèm hiển thị chính xác trên thẻ công việc.</li>
+<li>Giao diện phản hồi mượt mà, các thẻ công việc di chuyển đúng cột trạng thái ngay lập tức.</li>
+<li>Các yêu cầu HTTP <code>POST /tasks</code>, <code>PUT /tasks/{id}</code>, <code>DELETE /tasks/{id}</code> gửi đến API Gateway trả về HTTP Status Code <strong><code>200 OK</code></strong> hoặc <strong><code>201 Created</code></strong>.</li>
 </ul>
 </li>
 </ul>
-<p><img src="/images/5-Workshop/5.5-testing/create-task.png" alt="Tạo mới Task và Upload ảnh"></p>
+<p><img src="../../../../images/5-Workshop/5.5-testing/03-crud-kanban.jpg" alt="Thao tác CRUD trên Web UI"></p>
 <hr>
-<h4 id="2-kiểm-thử-xem-danh-sách-lọc--tìm-kiếm-read--query">2. Kiểm thử Xem danh sách, Lọc &amp; Tìm kiếm (Read &amp; Query)</h4>
+<h4 id="2-xác-minh-dữ-liệu-lưu-trữ-tại-amazon-dynamodb-table">2. Xác minh Dữ liệu Lưu trữ tại Amazon DynamoDB Table</h4>
 <ul>
 <li>
 <p><strong>Các bước thực hiện:</strong></p>
 <ol>
-<li>Truy cập Màn hình chính ứng dụng.</li>
-<li>Chuyển đổi giữa các giao diện hiển thị: <strong>List View</strong>, <strong>Kanban Board</strong> và <strong>Calendar View</strong>.</li>
-<li>Nhập từ khóa vào thanh <strong>Search Bar</strong> và lọc theo Tag/Status.</li>
+<li>Truy cập <strong>Amazon DynamoDB Console</strong> -&gt; Mở mục <strong>Explore items</strong>.</li>
+<li>Chọn bảng <strong><code>TodoNotesTable</code></strong>.</li>
+<li>Kiểm tra danh sách các bản ghi dữ liệu được tạo ra.</li>
 </ol>
 </li>
 <li>
 <p><strong>Kết quả kỳ vọng:</strong></p>
 <ul>
-<li>API <code>GET /tasks</code> thực thi và trả về đúng danh sách dữ liệu thuộc về người dùng đang đăng nhập.</li>
-<li>Bộ lọc và công cụ tìm kiếm hoạt động chính xác theo thời gian thực.</li>
+<li>Bảng DynamoDB lưu trữ đầy đủ các thuộc tính của công việc: <code>userId</code> (Partition Key), <code>taskId</code> (Sort Key), <code>title</code>, <code>description</code>, <code>status</code>, <code>category</code>, <code>createdAt</code>, <code>updatedAt</code>.</li>
+<li>Dữ liệu phân quyền chính xác theo đúng chuỗi định danh <code>userId</code> của tài khoản Cognito đang đăng nhập.</li>
 </ul>
 </li>
 </ul>
-<p><img src="/images/5-Workshop/5.5-testing/read-tasks-kanban.png" alt="Giao diện danh sách Task và Bộ lọc"></p>
-<hr>
-<h4 id="3-kiểm-thử-cập-nhật-task--kéo-thả-kanban-update">3. Kiểm thử Cập nhật Task &amp; Kéo thả Kanban (Update)</h4>
-<ul>
-<li>
-<p><strong>Các bước thực hiện:</strong></p>
-<ol>
-<li>Mở một Task hiện có, thay đổi tiêu đề hoặc nội dung mô tả, sau đó bấm <strong>Update</strong>.</li>
-<li>Tại giao diện <strong>Kanban Board</strong>, thực hiện thao tác kéo thả (Drag-and-Drop) thẻ công việc từ cột <em>In Progress</em> sang <em>Completed</em>.</li>
-</ol>
-</li>
-<li>
-<p><strong>Kết quả kỳ vọng:</strong></p>
-<ul>
-<li>API <code>PUT /tasks/{id}</code> trả về HTTP <strong><code>200 OK</code></strong>.</li>
-<li>Trạng thái (<code>status</code>) của công việc trong DynamoDB được cập nhật tương ứng (<code>COMPLETED</code>).</li>
-</ul>
-</li>
-</ul>
-<p><img src="/images/5-Workshop/5.5-testing/update-task-kanban.png" alt="Cập nhật trạng thái Task trên Kanban"></p>
-<hr>
-<h4 id="4-kiểm-thử-xóa-task-delete">4. Kiểm thử Xóa Task (Delete)</h4>
-<ul>
-<li>
-<p><strong>Các bước thực hiện:</strong></p>
-<ol>
-<li>Nhấn nút <strong>Delete (Xóa)</strong> tại thẻ công việc cần loại bỏ.</li>
-<li>Xác nhận xóa trên hộp thoại cảnh báo (Confirmation Modal).</li>
-</ol>
-</li>
-<li>
-<p><strong>Kết quả kỳ vọng:</strong></p>
-<ul>
-<li>API <code>DELETE /tasks/{id}</code> trả về HTTP <strong><code>200 OK</code></strong>.</li>
-<li>Bản ghi tương ứng bị xóa hoàn toàn khỏi bảng DynamoDB.</li>
-</ul>
-</li>
-</ul>
-<p><img src="/images/5-Workshop/5.5-testing/delete-task.png" alt="Xóa Task thành công"></p>
+<p><img src="../../../../images/5-Workshop/5.5-testing/04-dynamodb.jpg" alt="Bản ghi trong bảng DynamoDB"></p>
 
 
 
@@ -1816,19 +1769,19 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/fcj-workshop-template/js/clipboard.min.js?1785491842"></script>
-    <script src="/fcj-workshop-template/js/perfect-scrollbar.min.js?1785491842"></script>
-    <script src="/fcj-workshop-template/js/perfect-scrollbar.jquery.min.js?1785491842"></script>
-    <script src="/fcj-workshop-template/js/jquery.sticky.js?1785491842"></script>
-    <script src="/fcj-workshop-template/js/featherlight.min.js?1785491842"></script>
-    <script src="/fcj-workshop-template/js/highlight.pack.js?1785491842"></script>
+    <script src="/fcj-workshop-template/js/clipboard.min.js?1785511521"></script>
+    <script src="/fcj-workshop-template/js/perfect-scrollbar.min.js?1785511521"></script>
+    <script src="/fcj-workshop-template/js/perfect-scrollbar.jquery.min.js?1785511521"></script>
+    <script src="/fcj-workshop-template/js/jquery.sticky.js?1785511521"></script>
+    <script src="/fcj-workshop-template/js/featherlight.min.js?1785511521"></script>
+    <script src="/fcj-workshop-template/js/highlight.pack.js?1785511521"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/fcj-workshop-template/js/modernizr.custom-3.6.0.js?1785491842"></script>
-    <script src="/fcj-workshop-template/js/learn.js?1785491842"></script>
-    <script src="/fcj-workshop-template/js/hugo-learn.js?1785491842"></script>
+    <script src="/fcj-workshop-template/js/modernizr.custom-3.6.0.js?1785511521"></script>
+    <script src="/fcj-workshop-template/js/learn.js?1785511521"></script>
+    <script src="/fcj-workshop-template/js/hugo-learn.js?1785511521"></script>
 
-    <link href="/fcj-workshop-template/mermaid/mermaid.css?1785491842" rel="stylesheet" />
-    <script src="/fcj-workshop-template/mermaid/mermaid.js?1785491842"></script>
+    <link href="/fcj-workshop-template/mermaid/mermaid.css?1785511521" rel="stylesheet" />
+    <script src="/fcj-workshop-template/mermaid/mermaid.js?1785511521"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

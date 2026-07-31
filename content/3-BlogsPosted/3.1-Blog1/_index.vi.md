@@ -78,4 +78,4 @@ Amazon S3 trong AWS Local Zones (đặc biệt là **Hanoi Local Zone**) là bư
 
 🔗 **Link tài liệu tham khảo gốc:** [AWS Blog: Unlocking Data Residency with Amazon S3 in AWS Local Zones](https://aws.amazon.com/blogs/aws/unlocking-data-residency-with-amazon-s3-in-aws-local-zones/)
 
-![Blog](<../../images/3-Blogs/Blog1.png>)
+![Blog](<../../../images/3-Blogs/Blog1.png>)

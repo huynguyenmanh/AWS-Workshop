@@ -23,7 +23,7 @@ In this section, we conduct end-to-end testing for all CRUD (Create, Read, Updat
   * The UI updates smoothly, with task cards transitioning between status columns instantly.
   * Backend API Gateway calls (`POST /tasks`, `PUT /tasks/{id}`, `DELETE /tasks/{id}`) respond with HTTP Status Code **`200 OK`** or **`201 Created`**.
 
-![Web UI CRUD Operations](/images/5-Workshop/5.5-testing/03-crud-kanban.jpg)
+![Web UI CRUD Operations](../../../images/5-Workshop/5.5-testing/03-crud-kanban.jpg)
 
 ---
 
@@ -38,4 +38,4 @@ In this section, we conduct end-to-end testing for all CRUD (Create, Read, Updat
   * The DynamoDB table stores all task attributes correctly: `userId` (Partition Key), `taskId` (Sort Key), `title`, `description`, `status`, `category`, `createdAt`, and `updatedAt`.
   * Multi-tenancy access control isolates records strictly belonging to the authenticated Cognito user's `userId`.
 
-![DynamoDB Item Verification](/images/5-Workshop/5.5-testing/04-dynamodb.jpg)
+![DynamoDB Item Verification](../../../images/5-Workshop/5.5-testing/04-dynamodb.jpg)

@@ -17,7 +17,7 @@ Sử dụng Amazon CloudFront làm Mạng phân phối nội dung (CDN) để t�
    * **Origin access:** Chọn **Origin access control settings (recommended)**.
    * Nhấn nút **Create control setting**, giữ nguyên các thông số mặc định trong bảng hiện ra và nhấn **Create**.
 
-![Configure CloudFront OAC](../../../images/5-Workshop/5.3-S3/cloudfront1.png)
+![Configure CloudFront OAC](../../../../images/5-Workshop/5.3-S3/cloudfront1.png)
 
 3. Tại mục **Web Application Firewall (WAF)**:
    * Chọn **Do not enable security protections** (để tránh phát sinh chi phí không cần thiết trong khuôn khổ của workshop này).
@@ -29,4 +29,4 @@ Sử dụng Amazon CloudFront làm Mạng phân phối nội dung (CDN) để t�
 
 Nếu bạn không tìm thấy thì có thể vào Origins -> Edit. Sau đó tạo OAC cho S3 vừa tạo nếu chưa có và bấm vào **Copy Policies**
 
-![Sao chép S3 Bucket Policy](../../../images/5-Workshop/5.3-S3/cloudfront2.png)
+![Sao chép S3 Bucket Policy](../../../../images/5-Workshop/5.3-S3/cloudfront2.png)

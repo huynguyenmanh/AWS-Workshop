@@ -19,7 +19,7 @@ In this section, we validate the operational observability of our Serverless bac
 * **Expected Results:**
   * CloudWatch records the complete execution trace: `START RequestId`, `REPORT Duration`, `Billed Duration`, `Memory Size`.
 
-![CloudWatch Log Stream Tracing](/images/5-Workshop/5.5-testing/08-cloudwatch-logs.jpg)
+![CloudWatch Log Stream Tracing](../../../images/5-Workshop/5.5-testing/08-cloudwatch-logs.jpg)
 
 ---
 
@@ -32,7 +32,7 @@ In this section, we validate the operational observability of our Serverless bac
 * **Expected Results:**
   * Graphs reflect real-time request traffic accurately with 100% success rate.
 
-![Lambda Metrics Dashboard](/images/5-Workshop/5.5-testing/09-cloudwatch-metrics.jpg)
+![Lambda Metrics Dashboard](../../../images/5-Workshop/5.5-testing/09-cloudwatch-metrics.jpg)
 
 ---
 
@@ -45,4 +45,4 @@ In this section, we validate the operational observability of our Serverless bac
 * **Expected Results:**
   * The Alarm remains in the **`OK`** state.
 
-![Billing Alarm State Verification](/images/5-Workshop/5.5-testing/10-billing-alarm.jpg)
+![Billing Alarm State Verification](../../../images/5-Workshop/5.5-testing/10-billing-alarm.jpg)
