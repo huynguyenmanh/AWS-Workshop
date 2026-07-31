@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+	<channel>
+		<title>Testing Attachment Uploads via S3 Presigned URLs on Internship Report</title>
+		<link>http://localhost:1313/fcj-workshop-template/5-workshop/5.5-testing/5.5.3-s3-upload-testing/</link>
+		<description>Recent content in Testing Attachment Uploads via S3 Presigned URLs on Internship Report</description>
+		<generator>Hugo</generator>
+		<language>en</language>
+		
+		
+		
+		
+			<lastBuildDate></lastBuildDate>
+		
+			<atom:link href="http://localhost:1313/fcj-workshop-template/5-workshop/5.5-testing/5.5.3-s3-upload-testing/index.xml" rel="self" type="application/rss+xml" />
+	</channel>
+</rss>
