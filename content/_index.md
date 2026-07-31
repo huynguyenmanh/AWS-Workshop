@@ -13,11 +13,11 @@ chapter: false
 {{% /notice %}}
 
 ### Student Information:
-&emsp; **Full Name:** Nguyen Van A
+&emsp; **Full Name:** Nguyen Manh Huy
 
-&emsp; **Phone Number:** 0989888999 
+&emsp; **Phone Number:** 0939407360
 
-&emsp; **Email:** Anguyenvan@gmail.com
+&emsp; **Email:** huy.nguyenmanh@hcmut.edu.vn
 
 &emsp; **University:** Ho Chi Minh City University of Technology and Education
 
@@ -31,7 +31,7 @@ chapter: false
 
 &emsp; **Internship Duration:** From 12/08/2025 to 12/11/2025
 
-![Your profile picture](/images/avatar.png)
+![Your profile picture](../../images/avatar.png)
 
 ### Report Content
 
